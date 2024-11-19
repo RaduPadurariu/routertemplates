@@ -1,3 +1,120 @@
-@use "variables";
-@use "mixins";
-@use "base";
+@use "global" as *;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+// Resets
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Body Styles
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: $font-size-medium;
+  color: $white-text;
+  background-color: $heading-background;
+  line-height: 1.6;
+}
+
+a {
+  color: $secondary-text;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+a:hover {
+  color: $primary-text;
+}
+
+p {
+  color: $sliver-text;
+  font-size: 15px;
+  line-height: 30px;
+  margin: 20px 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+}
+
+// Flex
+
+.flex {
+  @include flex();
+}
+
+.flex-justify-center {
+  @include flex($justify: center);
+}
+
+.flex-justify-between {
+  @include flex($justify: space-between);
+}
+
+.flex-align-center {
+  @include flex($align: center);
+}
+
+.flex-justify-between-center {
+  @include flex($justify: space-between, $align: center);
+}
+
+.flex-center-center {
+  @include flex($justify: center, $align: center);
+}
+
+.flex-direction-column {
+  @include flex($direction: column);
+}
+
+.flex-wrap {
+  @include flex($wrap: wrap);
+}
+
+// Buttons
+button {
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 17px;
+  background-color: $primary-background;
+  color: $white-text;
+  border-radius: 50px;
+
+  cursor: pointer;
+}
+
+.fontSize {
+  font-size: 20px;
+}
+
+.primaryBtn {
+  background: none;
+  border: 2px solid $primary-background;
+}
+
+li {
+  list-style-type: none;
+}
+
+// Responsive
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
