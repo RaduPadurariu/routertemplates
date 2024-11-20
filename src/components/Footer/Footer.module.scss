@@ -6,6 +6,7 @@
   .footer_container {
     @include flex(center, center, column);
     width: 100%;
+    text-align: center;
 
     ul {
       @include flex();

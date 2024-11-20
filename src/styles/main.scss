@@ -44,12 +44,6 @@ h6 {
   font-weight: 400;
 }
 
-.container {
-  width: 80%;
-  margin: auto;
-  display: flex;
-}
-
 // Flex
 
 .flex {
@@ -84,6 +78,17 @@ h6 {
   @include flex($wrap: wrap);
 }
 
+// Main styles
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+section {
+  height: 90vh;
+  @include flex($align: "center");
+}
+
 // Buttons
 button {
   border: none;
@@ -93,7 +98,6 @@ button {
   background-color: $primary-background;
   color: $white-text;
   border-radius: 50px;
-
   cursor: pointer;
 }
 
@@ -103,7 +107,7 @@ button {
 
 .primaryBtn {
   background: none;
-  border: 2px solid $primary-background;
+  border: 2px solid $primary-text;
 }
 
 li {
@@ -116,5 +120,10 @@ li {
   .container {
     width: 100%;
     padding: 0 20px;
+  }
+
+  section {
+    height: auto;
+    padding-top: 50px;
   }
 }
