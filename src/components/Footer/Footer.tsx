@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.footer_container}>
+      <div className={styles.footer__container}>
         {" "}
         <ul>
           {social.map((el) => {
@@ -13,7 +13,7 @@ const Footer = () => {
               <li key={el.id}>
                 <FontAwesomeIcon
                   icon={el.icon}
-                  className={styles.social_icon}
+                  className={styles.footer__social__icon}
                 />
               </li>
             );
