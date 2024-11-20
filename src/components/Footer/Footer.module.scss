@@ -1,0 +1,26 @@
+@use "../../styles/global" as *;
+
+.footer {
+  width: 100%;
+  padding: 70px;
+  .footer_container {
+    @include flex(center, center, column);
+    width: 100%;
+
+    ul {
+      @include flex();
+      cursor: pointer;
+      li {
+        margin: 0.5rem;
+
+        color: $primary-text;
+        &:hover {
+          opacity: 0.7;
+        }
+        .social_icon {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
