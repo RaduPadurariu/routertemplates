@@ -4,7 +4,7 @@ import styles from "./HeroPage.module.scss";
 const HeroPage = () => {
   return (
     <section className={styles.heroPage}>
-      <div className={`container ${styles["heroPage-content"]}`}>
+      <div className={`container ${styles.heroPage__content}`}>
         <h3 className="fontSize">HELLO I'M</h3>
         <h1>
           <TypewriterComponent
