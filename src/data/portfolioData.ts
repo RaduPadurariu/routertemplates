@@ -12,7 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const navTemplates = [
-  { id: 1, text: "Educative", link: "/" },
+  { id: 1, text: "Educative", link: "/educative" },
   { id: 2, text: "Cooking", link: "/" },
   { id: 3, text: "Fitness", link: "/" },
   { id: 4, text: "Fashion", link: "/" },
