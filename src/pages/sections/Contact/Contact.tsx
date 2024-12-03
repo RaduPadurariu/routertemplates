@@ -2,14 +2,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Heading from "../../../components/Heading/Heading";
 import { contact } from "../../../data/portfolioData";
 import styles from "./Contact.module.scss";
+import { RefObject } from "react";
 
-const Contact = () => {
+interface ContactProps {
+  contactRef: RefObject<HTMLDivElement>;
+}
+
+const Contact: React.FC<ContactProps> = ({ contactRef }) => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
   return (
     <>
-      <div className={styles.contact}>
+      <div className={styles.contact} ref={contactRef}>
         <div className="container">
           <Heading title="Keep In Touch" />
           <div className={styles.contact__content}>
