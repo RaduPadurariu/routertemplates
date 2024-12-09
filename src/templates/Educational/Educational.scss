@@ -1,0 +1,67 @@
+@use "../../styles/global" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+.educational-template {
+  font-family: "Roboto", sans-serif;
+  // background-color: $educational-primary-background;
+}
+
+.educational-container {
+  max-width: 85%;
+  margin: auto;
+  @include flex($justify: space-between);
+}
+
+// Icons
+.educational-icon-container {
+  @include flex($align: center, $justify: center);
+  width: 40px;
+  height: 40px;
+  // line-height: 10px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: $educational-primary-text;
+  transition: 0.5s;
+}
+
+.educational-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.educational-icon-container:hover {
+  cursor: pointer;
+  background-color: $educational-primary-text;
+  color: $white-text;
+}
+
+.educational-icon-container:hover .educational-icon {
+  color: $white-text;
+}
+
+// Buttons
+.educational-template button {
+  padding: 17px 30px;
+  font-weight: 600;
+  border: none;
+  margin: 30px 10px 0 0;
+  border-radius: 3px;
+  cursor: pointer;
+  box-shadow: 0 24px 36px -11px rgb(0 0 0 / 9%);
+  transition: 0.5s;
+
+  &:hover {
+    box-shadow: none;
+  }
+
+  i {
+    margin-left: 20px;
+  }
+}
+
+.educational-primary-btn {
+  background-color: $educational-primary-text;
+  color: $white-text;
+}

@@ -10,7 +10,7 @@
 }
 
 // Body Styles
-body {
+.portfolio-template {
   font-family: "Poppins", sans-serif;
   font-size: $font-size-medium;
   color: $white-text;
@@ -84,7 +84,7 @@ h6 {
   margin: auto;
 }
 
-section {
+.portfolio-template section {
   height: 90vh;
   @include flex($align: "center");
 }

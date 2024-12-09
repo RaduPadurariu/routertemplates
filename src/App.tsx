@@ -10,11 +10,11 @@ function App() {
     contactRef.current?.scrollIntoView({ behavior: "smooth" });
 
   return (
-    <>
+    <div className="portfolio-template">
       <Navbar scrollToContact={scrollToContact} />
       <Home contactRef={contactRef} />
       <Footer />
-    </>
+    </div>
   );
 }
 
