@@ -1,5 +1,11 @@
+import EducationalHero from "./Hero/EducationalHero";
+
 const EducationalHome = () => {
-  return <div>EducationalHome</div>;
+  return (
+    <>
+      <EducationalHero />
+    </>
+  );
 };
 
 export default EducationalHome;
