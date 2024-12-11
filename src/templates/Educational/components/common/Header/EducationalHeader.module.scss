@@ -1,5 +1,6 @@
 @use "../../../../../styles/global" as *;
 
+// Head
 .educational-head {
   padding: 20px 0;
   color: $white-text;
@@ -24,6 +25,7 @@
   }
 }
 
+// Header
 .educational-header {
   background-color: rgba(255, 255, 255, 0.2);
   margin: 0 30px;
@@ -93,12 +95,6 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .educational-header__nav__links {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media screen and (max-width: 768px) {
   .educational-header {
     margin: 0;
     background-color: $educational-primary-text;
@@ -111,6 +107,10 @@
         }
       }
 
+      &__isSticky {
+        background-color: $educational-primary-text;
+      }
+
       &__links {
         display: none;
       }
@@ -118,7 +118,7 @@
       &__mobile {
         @include flex($justify: space-between, $direction: column);
         position: absolute;
-        top: 7vh;
+        top: 5.5rem;
         left: 0;
         width: 100%;
         background-color: $educational-primary-text;
@@ -136,6 +136,17 @@
 
       &__start {
         clip-path: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .educational-head {
+    .educational-logo {
+      h1 {
+        font-size: 20px;
+        font-weight: 900;
       }
     }
   }

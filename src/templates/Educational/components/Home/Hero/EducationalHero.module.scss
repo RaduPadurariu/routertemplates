@@ -4,13 +4,61 @@
   background-image: url("/images/Templates/Educational/bg.jpg");
   background-size: cover;
   background-attachment: fixed;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
   z-index: -1;
   width: 100%;
-  height: 100vh;
-  padding-top: 20%;
-  padding-right: 50px;
+  height: calc(100vh + 4rem);
+  min-height: 55rem;
+  margin-top: -14rem;
   color: $white-text;
+
+  p {
+    color: $white-text;
+    margin: 0;
+  }
+
+  &__courseBtn {
+    color: $educational-primary-text;
+    background-color: $white-text;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  &__arrowIcon {
+    margin-left: 20px;
+  }
+
+  :global(.educational-container) {
+    padding-top: 150px;
+    @include flex($align: center);
+    height: 100%;
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1500px) {
+  .educational-hero {
+    :global(.educational-container) {
+      @include flex($align: center);
+      // height: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .educational-hero {
+    background-position: right;
+
+    :global(.educational-row) {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-height: 900px) {
+  .educational-hero {
+  }
 }
