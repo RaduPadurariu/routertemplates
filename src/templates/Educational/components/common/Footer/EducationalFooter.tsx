@@ -102,7 +102,7 @@ const EducationalFooter = () => {
           <div className={styles["educational-footer__box"]}>
             <h3>Recent Post</h3>
             {blog.slice(0, 3).map((val) => (
-              <div className={styles["educational-footer__items"]}>
+              <div key={val.id} className={styles["educational-footer__items"]}>
                 <div className="img">
                   <img src={val.cover} alt="no-img" />
                 </div>
