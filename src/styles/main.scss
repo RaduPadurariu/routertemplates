@@ -78,6 +78,16 @@ h6 {
   @include flex($wrap: wrap);
 }
 
+// Grid
+
+.grid {
+  display: grid;
+}
+
+.grid-col-2 {
+  grid-template-columns: repeat(2fr, auto);
+}
+
 // Main styles
 .container {
   width: 80%;

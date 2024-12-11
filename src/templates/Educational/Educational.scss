@@ -13,6 +13,14 @@
   @include flex($justify: space-between);
 }
 
+.educational-row {
+  width: 50%;
+}
+
+.educational-container p {
+  font-size: 18px;
+}
+
 // Icons
 .educational-icon-container {
   @include flex($align: center, $justify: center);
