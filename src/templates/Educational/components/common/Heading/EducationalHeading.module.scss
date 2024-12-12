@@ -1,12 +1,11 @@
 @use "../../../../../styles/global" as *;
 
-#educational-heading {
+.educational-heading {
   text-align: left;
 
   h3 {
     font-weight: 600;
     letter-spacing: 1px;
-    color: $white-text;
     text-transform: uppercase;
   }
 

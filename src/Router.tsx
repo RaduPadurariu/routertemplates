@@ -3,6 +3,7 @@ import App from "./App";
 import EducativeApp from "./templates/Educational/EducationalApp";
 import EducationalHome from "./templates/Educational/components/Home/EducationalHome";
 import EducationalMyEducation from "./templates/Educational/components/MyEducation/EducationalMyEducation";
+import EducationalAbout from "./templates/Educational/components/About/EducationalAbout";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -13,6 +14,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, path: "", element: <EducationalHome /> },
       { path: "myEducation", element: <EducationalMyEducation /> },
+      { path: "about", element: <EducationalAbout /> },
     ],
   },
 ]);

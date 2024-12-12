@@ -84,10 +84,10 @@ h6 {
   display: grid;
 }
 
-.grid-col-2 {
-  grid-template-columns: repeat(2fr, auto);
+.grid-col-4 {
+  display: grid;
+  grid-template-columns: repeat(4fr, auto);
 }
-
 // Main styles
 .container {
   width: 80%;

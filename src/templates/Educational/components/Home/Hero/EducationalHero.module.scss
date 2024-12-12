@@ -5,12 +5,18 @@
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  z-index: -1;
+  z-index: 0;
   width: 100%;
   height: calc(100vh + 4rem);
   min-height: 55rem;
   margin-top: -14rem;
   color: $white-text;
+
+  .custom-headingClass {
+    h3 {
+      color: $white-text;
+    }
+  }
 
   p {
     color: $white-text;
@@ -55,10 +61,5 @@
     :global(.educational-row) {
       width: 100%;
     }
-  }
-}
-
-@media screen and (max-height: 900px) {
-  .educational-hero {
   }
 }

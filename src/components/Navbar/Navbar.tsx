@@ -116,7 +116,9 @@ const NavTemplates = () => {
       {navTemplates.map((el) => {
         return (
           <li key={el.id} className={styles.navTemplate}>
-            <Link to={el.link}>{el.text}</Link>
+            <Link to={el.link}>
+              <span>{el.text}</span>
+            </Link>
           </li>
         );
       })}
