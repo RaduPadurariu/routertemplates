@@ -12,6 +12,7 @@ const EducationalHero = () => {
             <EducationalHeading
               subtitle="WELCOME TO ACADEMIA"
               title="Best Online Education Expertise"
+              className={styles["custom-headingClass"]}
             />
             <p>
               Far far away, behind the word mountains, far from the countries

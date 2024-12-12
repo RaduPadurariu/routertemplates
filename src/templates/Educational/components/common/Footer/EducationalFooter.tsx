@@ -37,7 +37,7 @@ const EducationalFooter = () => {
       </section>
 
       {/* Footer */}
-      <footer>
+      <footer className={styles["educational-footer-mainContainer"]}>
         <div
           className={`educational-container ${styles["educational-footer"]}`}
         >

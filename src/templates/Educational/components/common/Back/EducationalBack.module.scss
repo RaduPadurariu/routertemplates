@@ -1,0 +1,42 @@
+@use "../../../../../styles/global" as *;
+
+.educational-back {
+  background-image: url("/images/Templates/Educational/back.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: calc(100vh + 4rem);
+  min-height: 55rem;
+  margin-top: -14rem;
+  color: $white-text;
+  text-align: center;
+  @include flex($align: center, $justify: center, $direction: column);
+
+  h1 {
+    font-size: 100px;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: 17px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    pointer-events: auto;
+
+    a {
+      color: $white-text;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .educational-back {
+    h1 {
+      font-size: 50px;
+    }
+  }
+}

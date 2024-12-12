@@ -4,7 +4,7 @@
 
 .educational-template {
   font-family: "Roboto", sans-serif;
-  // background-color: $educational-primary-background;
+  background-color: $educational-primary-background;
 }
 
 .educational-container {
@@ -71,4 +71,11 @@
 .educational-primary-btn {
   background-color: $educational-primary-text;
   color: $white-text;
+}
+
+@media screen and (max-width: 576px) {
+  .educational-container {
+    max-width: 100%;
+    padding-inline: 15px;
+  }
 }
