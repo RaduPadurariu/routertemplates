@@ -68,9 +68,19 @@
   }
 }
 
-.educational-primary-btn {
+.educational-template .educational-primary-btn {
   background-color: $educational-primary-text;
   color: $white-text;
+}
+
+.educational-template .educational-outlineBtn {
+  margin: 0;
+  box-shadow: none;
+  border: 2px solid $educational-primary-text;
+  width: 100%;
+  transition: 0.5s;
+  background-color: $white-text;
+  color: $educational-primary-text;
 }
 
 @media screen and (max-width: 576px) {
