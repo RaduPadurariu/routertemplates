@@ -1,0 +1,109 @@
+@use "../../../../styles/global" as *;
+
+.educational-price {
+  padding: 80px 0;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  &__items {
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+    background-color: $white-text;
+  }
+
+  h4 {
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 50px;
+    margin: 20px 0;
+    color: $educational-primary-text;
+    font-weight: 700;
+
+    span {
+      font-size: 20px;
+      margin-right: 5px;
+      color: $black-text;
+    }
+  }
+
+  p {
+    color: $muted-text;
+    margin: 40px 0;
+  }
+}
+
+// FAQ
+
+.educational-faq {
+  :global(.educational-container) {
+    max-width: 70%;
+    border-radius: 5px;
+    display: block;
+  }
+
+  &__box {
+    background-color: $white-text;
+    margin-bottom: 20px;
+
+    &_accordion:hover {
+      background-color: $educational-primary-text;
+      color: $white-text;
+    }
+  }
+
+  button {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: $white-text;
+    color: $educational-primary-text;
+    font-size: 14px;
+  }
+
+  h2 {
+    font-weight: 500;
+  }
+
+  p {
+    padding: 20px;
+    margin: 0;
+    color: $black-text;
+  }
+}
+
+.custom-headingClass {
+  text-align: center;
+  padding: 40px 0;
+
+  h3 {
+    color: $educational-primary-text;
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1400px) {
+  .educational-price {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .educational-price {
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

@@ -83,6 +83,11 @@
   color: $educational-primary-text;
 }
 
+.educational-template .educational-outlineBtn:hover {
+  background-color: $educational-primary-text;
+  color: $white-text;
+}
+
 @media screen and (max-width: 576px) {
   .educational-container {
     max-width: 100%;
