@@ -3,6 +3,7 @@ import {
   faTwitter,
   faInstagram,
   faYoutube,
+  faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faMap,
@@ -278,6 +279,56 @@ export const online = [
     courseName: "Web Management",
     course: "17 Courses",
   },
+];
+
+export const team = [
+  {
+    cover: "/images/Templates/Educational/team/t1.jpg",
+    name: "Ph.D Adrian Molises",
+    work: "DEVELOPER AND LEAD INSTRUCTOR",
+  },
+  {
+    cover: "/images/Templates/Educational/team/t2.jpg",
+    name: "Ph.D Arthur MaGregor",
+    work: "DEVELOPER AND LEAD INSTRUCTOR",
+  },
+  {
+    cover: "/images/Templates/Educational/team/t3.jpg",
+    name: "Ph.D Anna Hanzen",
+    work: "DEVELOPER AND LEAD INSTRUCTOR",
+  },
+  {
+    cover: "/images/Templates/Educational/team/t4.jpg",
+    name: "Ph.D Brian Wooden",
+    work: "DEVELOPER AND LEAD INSTRUCTOR",
+  },
+  {
+    cover: "/images/Templates/Educational/team/t5.jpg",
+    name: "Ph.D Adrian Molises",
+    work: "DEVELOPER AND LEAD INSTRUCTOR",
+  },
+  {
+    cover: "/images/Templates/Educational/team/t6.jpg",
+    name: "Ph.D Arthur MaGregor",
+    work: "DEVELOPER AND LEAD INSTRUCTOR",
+  },
+  {
+    cover: "/images/Templates/Educational/team/t7.jpg",
+    name: "Ph.D Anna Hanzen",
+    work: "DEVELOPER AND LEAD INSTRUCTOR",
+  },
+  {
+    cover: "/images/Templates/Educational/team/t8.jpg",
+    name: "Ph.D Brian Wooden",
+    work: "DEVELOPER AND LEAD INSTRUCTOR",
+  },
+];
+
+export const teamSocial = [
+  { id: 1, icon: faFacebook },
+  { id: 2, icon: faTwitter },
+  { id: 3, icon: faInstagram },
+  { id: 4, icon: faTiktok },
 ];
 
 export const blog = [
