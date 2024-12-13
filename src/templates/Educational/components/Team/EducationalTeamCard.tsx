@@ -6,7 +6,7 @@ const EducationalTeamCard = () => {
   return (
     <>
       {team.map((val) => (
-        <div className={styles["educational-team__items"]}>
+        <div key={val.id} className={styles["educational-team__items"]}>
           <div className={styles["educational-team__items_img"]}>
             <img src={val.cover} alt="no-img" />
             <ul className={styles["educational-team__items_img_overlay"]}>

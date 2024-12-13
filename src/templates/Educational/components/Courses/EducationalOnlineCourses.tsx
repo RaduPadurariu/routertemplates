@@ -16,7 +16,10 @@ const EducationalOnlineCourses = () => {
             className={`${styles["educational-online__content"]} ${styles["educational-online__grid"]}`}
           >
             {online.map((val) => (
-              <div className={styles["educational-online__content_box"]}>
+              <div
+                key={val.id}
+                className={styles["educational-online__content_box"]}
+              >
                 <div className={styles["educational-online__content_box_img"]}>
                   <img src={val.cover} />
                   <img

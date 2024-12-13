@@ -11,7 +11,10 @@ const EducationalCoursesCard = () => {
           className={`educational-container ${styles["educational-coursesCard__grid"]}`}
         >
           {coursesCard.map((val) => (
-            <div className={styles["educational-coursesCard__items"]}>
+            <div
+              key={val.id}
+              className={styles["educational-coursesCard__items"]}
+            >
               <div className={styles["educational-coursesCard__items_content"]}>
                 <div
                   className={
@@ -88,7 +91,7 @@ const EducationalCoursesCard = () => {
                     }
                   >
                     {val.courseTeacher.map((details) => (
-                      <>
+                      <div key={details.id}>
                         <div
                           className={
                             styles[
@@ -116,7 +119,7 @@ const EducationalCoursesCard = () => {
                           </div>
                         </div>
                         <span>{details.totalTime}</span>
-                      </>
+                      </div>
                     ))}
                   </div>
                 </div>

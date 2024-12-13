@@ -10,7 +10,10 @@ const EducationalAboutWrapper = () => {
         >
           {aboutWrapper.map((val) => {
             return (
-              <div className={styles["educational-aboutWrapper__box"]}>
+              <div
+                key={val.id}
+                className={styles["educational-aboutWrapper__box"]}
+              >
                 <div className={styles["educational-aboutWrapper__box_img"]}>
                   <img src={val.cover} alt="no-img" />
                 </div>

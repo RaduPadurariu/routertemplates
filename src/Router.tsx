@@ -6,6 +6,7 @@ import EducationalMyEducation from "./templates/Educational/components/MyEducati
 import EducationalAbout from "./templates/Educational/components/About/EducationalAbout";
 import EducationalCourses from "./templates/Educational/components/Courses/EducationalCourses";
 import EducationalTeam from "./templates/Educational/components/Team/EducationalTeam";
+import EducationalPricing from "./templates/Educational/components/Pricing/EducationalPricing";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
       { path: "about", element: <EducationalAbout /> },
       { path: "courses", element: <EducationalCourses /> },
       { path: "team", element: <EducationalTeam /> },
+      { path: "pricing", element: <EducationalPricing /> },
     ],
   },
 ]);

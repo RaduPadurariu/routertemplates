@@ -27,7 +27,10 @@ const EducationalAboutCard = () => {
             <div className={styles["educational-aboutHome__items"]}>
               {homeAbout.map((val) => {
                 return (
-                  <div className={styles["educational-aboutHome__items__item"]}>
+                  <div
+                    key={val.id}
+                    className={styles["educational-aboutHome__items__item"]}
+                  >
                     <div
                       className={styles["educational-aboutHome__items__img"]}
                     >
