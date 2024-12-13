@@ -4,6 +4,7 @@ import EducativeApp from "./templates/Educational/EducationalApp";
 import EducationalHome from "./templates/Educational/components/Home/EducationalHome";
 import EducationalMyEducation from "./templates/Educational/components/MyEducation/EducationalMyEducation";
 import EducationalAbout from "./templates/Educational/components/About/EducationalAbout";
+import EducationalCourses from "./templates/Educational/components/Courses/EducationalCourses";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { index: true, path: "", element: <EducationalHome /> },
       { path: "myEducation", element: <EducationalMyEducation /> },
       { path: "about", element: <EducationalAbout /> },
+      { path: "courses", element: <EducationalCourses /> },
     ],
   },
 ]);
