@@ -424,7 +424,7 @@ export const faq = [
   },
 ];
 
-export const blog = [
+export const journal = [
   {
     id: 1,
     type: "admin",
