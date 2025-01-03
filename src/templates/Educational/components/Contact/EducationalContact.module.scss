@@ -1,0 +1,112 @@
+@use "../../../../styles/global" as *;
+
+.educational-contact {
+  padding: 80px 0;
+
+  &__main {
+    @include flex($justify: space-between);
+    background-color: $white-text;
+    box-shadow: 0 5px 25px -2px rgb(0 0 0 / 6%);
+
+    &_right {
+      padding: 50px;
+      &_items {
+        margin: 30px 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+
+        &_box {
+          p {
+            font-size: 17px;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  h1 {
+    font-size: 30px;
+    font-weight: 400;
+  }
+
+  h3 {
+    margin-top: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: $muted-text;
+  }
+
+  span {
+    color: $educational-primary-text;
+    font-weight: 600;
+    font-size: 15px;
+    word-spacing: 5px;
+  }
+
+  textarea,
+  input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    outline: none;
+    border: 1px solid $muted-text;
+  }
+
+  &__form {
+    @include flex($justify: space-between);
+
+    input:nth-child(1) {
+      margin-right: 10px;
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1024px) {
+  .educational-contact {
+    &__main {
+      @include flex($direction: column);
+
+      &_left,
+      &_right {
+        width: 100%;
+      }
+    }
+
+    iframe {
+      height: 50vh;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .educational-contact {
+    &__main {
+      &_right_items {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .educational-contact {
+    &__main {
+      &_right_items {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
