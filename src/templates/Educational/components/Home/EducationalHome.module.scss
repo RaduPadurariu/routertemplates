@@ -1,0 +1,19 @@
+@use "../../../../styles/global" as *;
+
+.educational-homePrice {
+  padding: 80px 0;
+}
+
+.custom-headingClass {
+  text-align: center;
+  padding: 40px 0;
+
+  h3 {
+    color: $educational-primary-text;
+  }
+}
+
+.educational-homeJournal,
+.educational-homeCourses__main {
+  @include flex($direction: column);
+}

@@ -28,7 +28,7 @@ const EducationalFAQ = () => {
       <section className={styles["educational-faq"]}>
         <div className="educational-container">
           {faq.map((val, index) => (
-            <div className={styles["educational-faq__box"]}>
+            <div key={val.id} className={styles["educational-faq__box"]}>
               <button
                 className={styles["educational-faq__box_accordion"]}
                 onClick={() => toggle(index)}

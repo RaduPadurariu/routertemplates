@@ -1,5 +1,11 @@
+import EducationalBack from "../common/Back/EducationalBack";
+
 const EducationalMyEducation = () => {
-  return <div>EducationalMyEducation</div>;
+  return (
+    <>
+      <EducationalBack title="My Courses" />
+    </>
+  );
 };
 
 export default EducationalMyEducation;

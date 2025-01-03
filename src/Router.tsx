@@ -25,6 +25,7 @@ const router = createBrowserRouter([
       { path: "pricing", element: <EducationalPricing /> },
       { path: "journal", element: <EducationalJournal /> },
       { path: "contact", element: <EducationalContact /> },
+      { path: "myCourses", element: <EducationalMyEducation /> },
     ],
   },
 ]);

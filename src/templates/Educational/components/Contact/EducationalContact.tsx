@@ -2,8 +2,17 @@ import EducationalBack from "../common/Back/EducationalBack";
 import styles from "./EducationalContact.module.scss";
 
 const EducationalContact = () => {
-  const map =
-    'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d904726.6131739549!2d26.1025!3d44.4268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sro!4v1652535615693!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ';
+  const map = `
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d904726.6131739549!2d26.1025!3d44.4268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sro!4v1652535615693!5m2!1sen!2sro"
+    width="100%"
+    height="100%"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+`;
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,7 +27,11 @@ const EducationalContact = () => {
           <div
             className={`educational-row ${styles["educational-contact__main_left"]}`}
           >
-            <iframe src={map}></iframe>
+            <div
+              className={styles["educational-contact__iframe"]}
+              dangerouslySetInnerHTML={{ __html: map }}
+            ></div>
+            ;
           </div>
           <div
             className={`educational-row ${styles["educational-contact__main_right"]}`}
@@ -53,9 +66,11 @@ const EducationalContact = () => {
                 <input type="email" placeholder="Email" />
               </div>
               <input type="text" placeholder="Subject" />
-              <textarea cols={30} rows={10}>
-                Create a message here...
-              </textarea>
+              <textarea
+                cols={30}
+                rows={10}
+                defaultValue={"Create a message here..."}
+              ></textarea>
               <button type="submit" className="educational-primary-btn">
                 SEND MESSAGE
               </button>
