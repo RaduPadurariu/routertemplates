@@ -7,10 +7,14 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
-const EducationalJournalCard = () => {
+interface Slice {
+  slice: number;
+}
+
+const EducationalJournalCard: React.FC<Slice> = ({ slice }) => {
   return (
     <>
-      {journal.map((val) => {
+      {journal.slice(0, slice).map((val) => {
         return (
           <div key={val.id} className={styles["educational-blog__items"]}>
             <div className="img">

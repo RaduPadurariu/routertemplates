@@ -3,14 +3,18 @@ import { coursesCard } from "../../../../data/educationalData";
 import styles from "./EducationalCourses.module.scss";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-const EducationalCoursesCard = () => {
+interface Slice {
+  slice: number;
+}
+
+const EducationalCoursesCard: React.FC<Slice> = ({ slice }) => {
   return (
     <>
       <section className={styles["educational-coursesCard"]}>
         <div
           className={`educational-container ${styles["educational-coursesCard__grid"]}`}
         >
-          {coursesCard.map((val) => (
+          {coursesCard.slice(0, slice).map((val) => (
             <div
               key={val.id}
               className={styles["educational-coursesCard__items"]}

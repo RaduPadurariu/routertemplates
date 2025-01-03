@@ -10,7 +10,7 @@ const EducationalJournal = () => {
         <div
           className={`educational-container ${styles["educational-blog__grid"]}`}
         >
-          <EducationalJournalCard />
+          <EducationalJournalCard slice={6} />
         </div>
       </section>
     </>

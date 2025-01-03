@@ -81,6 +81,30 @@ export const aboutWrapper = [
   },
 ];
 
+export const testimonals = [
+  {
+    id: 1,
+    name: "ROGER SCOTT",
+    post: "MARKETING MANAGER",
+    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    cover: "/images/Templates/Educational/testimonials/t1.webp",
+  },
+  {
+    id: 2,
+    name: "ROGER SCOTT",
+    post: "MARKETING MANAGER",
+    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    cover: "/images/Templates/Educational/testimonials/t2.webp",
+  },
+  {
+    id: 3,
+    name: "ROGER SCOTT",
+    post: "MARKETING MANAGER",
+    desc: "Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.",
+    cover: "/images/Templates/Educational/testimonials/t3.webp",
+  },
+];
+
 export const coursesCard = [
   {
     id: 1,

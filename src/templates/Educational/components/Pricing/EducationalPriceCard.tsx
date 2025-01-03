@@ -5,7 +5,7 @@ const EducationalPriceCard = () => {
   return (
     <>
       {price.map((val) => (
-        <div className={styles["educational-price__items"]}>
+        <div key={val.id} className={styles["educational-price__items"]}>
           <h4>{val.name}</h4>
           <h1>
             <span>$</span>
