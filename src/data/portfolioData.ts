@@ -13,7 +13,7 @@ import {
 
 export const navTemplates = [
   { id: 1, text: "Educational", link: "/educational" },
-  { id: 2, text: "Cooking", link: "/" },
+  { id: 2, text: "Cooking", link: "/cooking" },
   { id: 3, text: "Fitness", link: "/" },
   { id: 4, text: "Fashion", link: "/" },
 ];

@@ -1,14 +1,23 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "./App";
-import EducativeApp from "./templates/Educational/EducationalApp";
-import EducationalHome from "./templates/Educational/components/Home/EducationalHome";
-import EducationalMyEducation from "./templates/Educational/components/MyEducation/EducationalMyEducation";
-import EducationalAbout from "./templates/Educational/components/About/EducationalAbout";
-import EducationalCourses from "./templates/Educational/components/Courses/EducationalCourses";
-import EducationalTeam from "./templates/Educational/components/Team/EducationalTeam";
-import EducationalPricing from "./templates/Educational/components/Pricing/EducationalPricing";
-import EducationalJournal from "./templates/Educational/components/Journal/EducationalJournal";
-import EducationalContact from "./templates/Educational/components/Contact/EducationalContact";
+
+// Educational
+
+import {
+  EducativeApp,
+  EducationalHome,
+  EducationalMyEducation,
+  EducationalAbout,
+  EducationalCourses,
+  EducationalTeam,
+  EducationalPricing,
+  EducationalJournal,
+  EducationalContact,
+} from "./templates/Educational/components/pages/index";
+
+// Cooking
+import CookingApp from "./templates/Cooking/CookingApp";
+import { CookingHome } from "./templates/Cooking/pages";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -27,6 +36,12 @@ const router = createBrowserRouter([
       { path: "contact", element: <EducationalContact /> },
       { path: "myCourses", element: <EducationalMyEducation /> },
     ],
+  },
+  {
+    path: "/cooking",
+    element: <CookingApp />,
+
+    children: [{ index: true, path: "", element: <CookingHome /> }],
   },
 ]);
 
