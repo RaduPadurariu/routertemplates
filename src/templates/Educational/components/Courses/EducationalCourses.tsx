@@ -6,7 +6,7 @@ const EducationalCourses = () => {
   return (
     <>
       <EducationalBack title="Explore Courses" />
-      <EducationalCoursesCard />
+      <EducationalCoursesCard slice={9} />
       <EducationalOnlineCourses />
     </>
   );
