@@ -8,7 +8,7 @@ const EducationalMyEducation = () => {
         <div className="educational-container">
           <div className={styles["educational-myCourses__w3"]}>
             <iframe
-              src="/data/websites/w3practice/index.html"
+              src="/data/websites/w3practice_tutorial/index.html"
               title="w3 school notes"
               className={styles["educational-myCourses__w3_iframe"]}
             ></iframe>
