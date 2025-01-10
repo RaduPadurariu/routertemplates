@@ -1,6 +1,7 @@
 import { Outlet } from "react-router-dom";
 import CookingHeader from "./components/Header/CookingHeader";
 import CookingSideBar from "./components/SideBar/CookingSideBar";
+import "./Cooking.scss";
 
 const CookingApp = () => {
   return (
