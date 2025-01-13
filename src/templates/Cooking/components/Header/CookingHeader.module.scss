@@ -71,6 +71,7 @@
 
     &_show {
       color: $white-text;
+      background-color: $cooking-clr-orange;
       @include flex($align: center);
     }
 
@@ -113,6 +114,7 @@
     border-radius: 50%;
     position: relative;
     transition: all 300ms ease-in-out;
+    background-color: $cooking-clr-orange;
 
     &_icon {
       transition: $cooking-transition;

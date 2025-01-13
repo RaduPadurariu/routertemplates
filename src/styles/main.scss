@@ -103,10 +103,7 @@ h6 {
 button {
   border: none;
   outline: none;
-  background: none;
   font-size: 17px;
-  background-color: $primary-text;
-  color: $white-text;
   border-radius: 50px;
   cursor: pointer;
 }
@@ -116,7 +113,6 @@ button {
 }
 
 .primaryBtn {
-  background: none;
   border: 2px solid $primary-text;
 }
 

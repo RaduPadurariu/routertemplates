@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 
 import styles from "./CookingHeader.module.scss";
 import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
+import { useCookingSidebarContext } from "../../context/CookingSideBarContext";
 
 const CookingNavbar = () => {
-  // const { openSidebar } = useSidebarContext();
+  const { openSidebar } = useCookingSidebarContext();
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [openCategories, setOpenCategories] = useState(false);
@@ -71,7 +72,10 @@ const CookingNavbar = () => {
                   {" "}
                   <Link
                     to="#"
-                    onClick={() => setOpenCategories(!openCategories)}
+                    onClick={() => {
+                      setOpenCategories(!openCategories);
+                      openSidebar();
+                    }}
                   >
                     <span>Categories</span>
                     <i>
