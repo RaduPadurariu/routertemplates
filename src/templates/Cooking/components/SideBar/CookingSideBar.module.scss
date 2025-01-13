@@ -1,0 +1,45 @@
+@use "../../../../styles/global" as *;
+
+.cooking-sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $white-text;
+  z-index: 1000;
+  padding: 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transform: translateX(100%);
+  transition: $cooking-transition;
+
+  &-visible {
+    transform: translateX(0);
+  }
+
+  &__hideBtn {
+    position: absolute;
+    right: 14px;
+    color: $cooking-clr-orange;
+    transition: $cooking-transition;
+    background-color: $white-text;
+
+    &:hover {
+      color: $cooking-clr-dark;
+    }
+  }
+
+  &__content {
+    &_ul {
+      margin-top: 4rem;
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (min-width: 576px) {
+  .cooking-sidebar {
+    width: 280px;
+  }
+}

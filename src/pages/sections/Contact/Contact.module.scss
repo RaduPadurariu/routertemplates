@@ -24,6 +24,10 @@
           margin-right: 10px;
         }
       }
+
+      button {
+        background-color: $primary-text;
+      }
     }
 
     &__right {

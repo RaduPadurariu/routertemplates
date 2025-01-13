@@ -18,6 +18,7 @@ import {
 // Cooking
 import CookingApp from "./templates/Cooking/CookingApp";
 import { CookingHome, CookingMyRecipes } from "./templates/Cooking/pages";
+import { CookingSidebarProvider } from "./templates/Cooking/context/CookingSideBarContext";
 
 const router = createBrowserRouter([
   { path: "/", element: <App /> },
@@ -39,7 +40,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/cooking",
-    element: <CookingApp />,
+    element: (
+      <CookingSidebarProvider>
+        <CookingApp />
+      </CookingSidebarProvider>
+    ),
 
     children: [
       { index: true, path: "", element: <CookingHome /> },
