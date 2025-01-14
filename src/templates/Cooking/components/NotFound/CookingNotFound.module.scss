@@ -1,0 +1,10 @@
+@use "../../../../styles/global" as *;
+
+.cooking-notFound {
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  &__container {
+    @include flex($align: center, $justify: center);
+  }
+}

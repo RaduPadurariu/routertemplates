@@ -32,6 +32,21 @@
   &__content {
     &_ul {
       margin-top: 4rem;
+
+      &_item {
+        padding: 6px 0;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.06);
+
+        &_link {
+          opacity: 0.9;
+          transition: $cooking-transition;
+          letter-spacing: 1px;
+          font-size: 13px;
+          &:hover {
+            color: $cooking-clr-orange;
+          }
+        }
+      }
     }
   }
 }
