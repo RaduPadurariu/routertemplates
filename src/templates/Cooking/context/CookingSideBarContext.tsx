@@ -12,7 +12,7 @@ interface CookingSidebarContextType extends CookingSidebarState {
   closeSidebar: () => void;
 }
 
-const initialState = {
+const initialState: CookingSidebarState = {
   isSidebarOpen: false,
 };
 

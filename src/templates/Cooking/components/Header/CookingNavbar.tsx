@@ -8,10 +8,9 @@ import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
 import { useCookingSidebarContext } from "../../context/CookingSideBarContext";
 
 const CookingNavbar = () => {
-  const { openSidebar } = useCookingSidebarContext();
+  const { openSidebar, isSidebarOpen } = useCookingSidebarContext();
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
-  const [openCategories, setOpenCategories] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -73,13 +72,12 @@ const CookingNavbar = () => {
                   <Link
                     to="#"
                     onClick={() => {
-                      setOpenCategories(!openCategories);
                       openSidebar();
                     }}
                   >
                     <span>Categories</span>
                     <i>
-                      {openCategories ? (
+                      {isSidebarOpen ? (
                         <TiArrowSortedUp />
                       ) : (
                         <TiArrowSortedDown />
