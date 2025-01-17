@@ -6,26 +6,12 @@ import {
 } from "./cookingActions";
 
 import { CATEGORIES_URL } from "../utils/constants";
-
-interface CookingCategory {
-  idCategory: string;
-  strCategory: string;
-  strCategoryThumb: string;
-}
-
-interface FetchCategoryBeginAction {
-  type: "FETCH_CATEGORY_BEGIN";
-}
-
-interface FetchCategorySuccessAction {
-  type: "FETCH_CATEGORY_SUCCESS";
-  payload: CookingCategory[];
-}
-
-interface FetchCategoryErrorAction {
-  type: "FETCH_CATEGORY_ERROR";
-  payload: string;
-}
+import {
+  CookingCategory,
+  FetchCategoryBeginAction,
+  FetchCategorySuccessAction,
+  FetchCategoryErrorAction,
+} from "../types/types";
 
 type CookingMealAction =
   | FetchCategoryBeginAction
@@ -33,21 +19,27 @@ type CookingMealAction =
   | FetchCategoryErrorAction;
 
 export const startFetchCategories = async (
-  dispatch: React.Dispatch<CookingMealAction>
+  dispatch: React.Dispatch<CookingMealAction>,
+  signal: AbortSignal
 ): Promise<void> => {
   try {
     dispatch({ type: FETCH_CATEGORY_BEGIN });
     const response = await axios.get<{ categories: CookingCategory[] }>(
-      `${CATEGORIES_URL}`
+      CATEGORIES_URL,
+      { signal }
     );
     dispatch({
       type: FETCH_CATEGORY_SUCCESS,
       payload: response.data.categories,
     });
   } catch (error: any) {
-    dispatch({
-      type: FETCH_CATEGORY_ERROR,
-      payload: error.message || "Something went wrong",
-    });
+    if (error.name === "CanceledError") {
+      console.log("Fetch request cancelled");
+    } else {
+      dispatch({
+        type: FETCH_CATEGORY_ERROR,
+        payload: error.message || "Something went wrong",
+      });
+    }
   }
 };
