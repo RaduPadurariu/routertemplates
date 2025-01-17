@@ -1,0 +1,25 @@
+@use "../../../../styles/global" as *;
+
+.cooking-categoryPage {
+  padding-top: 48px;
+  padding-bottom: 48px;
+
+  &__desc {
+    padding: 24px;
+    background-color: rgba(0, 0, 0, 0.02);
+    border: 1px solid $cooking-clr-orange;
+
+    h2 {
+      color: $cooking-clr-orange;
+      font-weight: 800;
+    }
+
+    p {
+      margin: 0;
+      margin-top: 12px;
+      font-size: 18px;
+      opacity: 0.7;
+      color: $black-text;
+    }
+  }
+}

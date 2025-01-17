@@ -1,4 +1,11 @@
 import CookingHome from "./HomePage/CookingHomePage";
-import CookingMyRecipes from "./MyRecipes/CookingMyRecipesPage";
+import CookingMyRecipesPage from "./MyRecipes/CookingMyRecipesPage";
+import CookingCategoryPage from "./CategoryPage/CookingCategoryPage";
+import CookingMealPage from "./MealPage/CookingMealDetailsPage";
 
-export { CookingHome, CookingMyRecipes };
+export {
+  CookingHome,
+  CookingMyRecipesPage,
+  CookingCategoryPage,
+  CookingMealPage,
+};

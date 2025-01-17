@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, LoaderFunction } from "react-router-dom";
 import App from "./App";
 
 // Educational
@@ -17,12 +17,77 @@ import {
 
 // Cooking
 import CookingApp from "./templates/Cooking/CookingApp";
-import { CookingHome, CookingMyRecipes } from "./templates/Cooking/pages";
+import {
+  CookingHome,
+  CookingMyRecipesPage,
+  CookingCategoryPage,
+  CookingMealPage,
+} from "./templates/Cooking/pages";
 import { CookingSidebarProvider } from "./templates/Cooking/context/CookingSideBarContext";
 import { CookingMealProvider } from "./templates/Cooking/context/CookingMealContext";
+import axios from "./templates/Cooking/api/axios";
+import {
+  MEAL_CATEGORIES_URL,
+  MEAL_SINGLE_URL,
+} from "./templates/Cooking/utils/constants";
+import {
+  CookingSingleMeal,
+  MealsLoaderData,
+} from "./templates/Cooking/types/types";
 
+// Meal Loader Function for Cooking Template
+export const mealsLoader: LoaderFunction = async ({
+  params,
+  request: { signal },
+}: any): Promise<MealsLoaderData> => {
+  const { name } = params;
+
+  try {
+    const response = await axios.get(`${MEAL_CATEGORIES_URL}${name}`, {
+      signal,
+    });
+
+    const meals = response.data.meals;
+
+    return {
+      meals,
+      categoryName: name,
+    };
+  } catch (error: any) {
+    if (error.name === "CanceledError") {
+      console.log("Request was cancelled");
+    }
+    throw new Response("Failed to load category data", { status: 500 });
+  }
+};
+
+export const singleMealLoader: LoaderFunction = async ({
+  params,
+  request: { signal },
+}: any): Promise<CookingSingleMeal> => {
+  const { id } = params;
+
+  try {
+    const response = await axios.get(`${MEAL_SINGLE_URL}${id}`, {
+      signal,
+    });
+
+    return response.data.meals;
+  } catch (error: any) {
+    if (error.name === "CanceledError") {
+      console.log("Request was cancelled");
+    }
+    throw new Response("Failed to load singleMeal data", { status: 500 });
+  }
+};
+
+// --------------------------------------------------------------------------
+// Create Router
 const router = createBrowserRouter([
+  // Portfolio main routes
   { path: "/", element: <App /> },
+
+  // Educational Routes
   {
     path: "/educational",
     element: <EducativeApp />,
@@ -39,6 +104,8 @@ const router = createBrowserRouter([
       { path: "myCourses", element: <EducationalMyEducation /> },
     ],
   },
+
+  // Cooking Routes
   {
     path: "/cooking",
     element: (
@@ -51,7 +118,19 @@ const router = createBrowserRouter([
 
     children: [
       { index: true, path: "", element: <CookingHome /> },
-      { path: "myRecipes", element: <CookingMyRecipes /> },
+      {
+        path: "meal/category/:name",
+        element: <CookingCategoryPage />,
+        loader: mealsLoader,
+        errorElement: <div>Failed to load meals. Please try again later.</div>,
+      },
+      {
+        path: "meal/:id",
+        element: <CookingMealPage />,
+        loader: singleMealLoader,
+        errorElement: <div>Failed to load meal. Please try again later.</div>,
+      },
+      { path: "myRecipes", element: <CookingMyRecipesPage /> },
     ],
   },
 ]);

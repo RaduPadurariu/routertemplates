@@ -3,32 +3,12 @@ import {
   FETCH_CATEGORY_ERROR,
   FETCH_CATEGORY_SUCCESS,
 } from "../actions/cookingActions";
-
-interface CookingCategory {
-  idCategory: string;
-  strCategory: string;
-  strCategoryThumb: string;
-}
-
-interface CookingMealState {
-  categoryLoading: boolean;
-  categoryError: string | null;
-  categories: CookingCategory[];
-}
-
-interface FetchCategoryBeginAction {
-  type: typeof FETCH_CATEGORY_BEGIN;
-}
-
-interface FetchCategorySuccessAction {
-  type: typeof FETCH_CATEGORY_SUCCESS;
-  payload: CookingCategory[];
-}
-
-interface FetchCategoryErrorAction {
-  type: typeof FETCH_CATEGORY_ERROR;
-  payload: string;
-}
+import {
+  CookingMealState,
+  FetchCategoryBeginAction,
+  FetchCategoryErrorAction,
+  FetchCategorySuccessAction,
+} from "../types/types";
 
 // Combine all action types
 type CookingMealAction =

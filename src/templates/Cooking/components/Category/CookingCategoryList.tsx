@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
 import styles from "./CookingCategoryList.module.scss";
-
-interface CookingCategory {
-  idCategory: string;
-  strCategory: string;
-  strCategoryThumb: string;
-}
+import { CookingCategory } from "../../types/types";
 
 const CookingCategoryList = ({
   categories,
@@ -26,7 +21,7 @@ const CookingCategoryList = ({
 
             return (
               <Link
-                to={`/meal/category/${title}`}
+                to={`/cooking/meal/category/${title}`}
                 className={styles["cooking-categoryList__item"]}
                 key={id}
               >

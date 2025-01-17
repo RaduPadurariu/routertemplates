@@ -8,18 +8,7 @@ import {
 } from "react";
 import { mealReducer } from "../reducers/cookingMealReducer";
 import { startFetchCategories } from "../actions/cookingMealsActions";
-
-interface CookingCategory {
-  idCategory: string;
-  strCategory: string;
-  strCategoryThumb: string;
-}
-
-interface CookingMealState {
-  categories: CookingCategory[];
-  categoryLoading: boolean;
-  categoryError: string | null;
-}
+import { CookingMealState } from "../types/types";
 
 interface CookingMealContextType extends CookingMealState {
   dispatch: Dispatch<any>;
@@ -39,7 +28,10 @@ export const CookingMealProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(mealReducer, initialState);
 
   useEffect(() => {
-    startFetchCategories(dispatch);
+    const controller = new AbortController(); // Create an AbortController
+    const { signal } = controller;
+
+    startFetchCategories(dispatch, signal);
   }, []);
 
   return (

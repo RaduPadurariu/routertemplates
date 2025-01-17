@@ -5,10 +5,12 @@ import CookingSidebar from "./components/Sidebar/CookingSideBar";
 
 const CookingApp = () => {
   return (
-    <div className="cooking-template">
-      <CookingHeader />
-      <CookingSidebar />
-      <Outlet />
+    <div className="cooking-template_html">
+      <div className="cooking-template">
+        <CookingHeader />
+        <CookingSidebar />
+        <Outlet />
+      </div>
     </div>
   );
 };
