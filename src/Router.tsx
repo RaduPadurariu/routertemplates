@@ -18,7 +18,7 @@ import {
 // Cooking
 import CookingApp from "./templates/Cooking/CookingApp";
 import {
-  CookingHome,
+  CookingHomePage,
   CookingMyRecipesPage,
   CookingCategoryPage,
   CookingMealPage,
@@ -29,13 +29,49 @@ import axios from "./templates/Cooking/api/axios";
 import {
   MEAL_CATEGORIES_URL,
   MEAL_SINGLE_URL,
+  SEARCH_URL,
 } from "./templates/Cooking/utils/constants";
 import {
   CookingSingleMeal,
+  MealsLoaderBySearch,
   MealsLoaderData,
 } from "./templates/Cooking/types/types";
+import CookingHomeSearch from "./templates/Cooking/pages/HomePage/CookingHomeSearch";
+import CookingMySingleMeal from "./templates/Cooking/pages/MyRecipes/CookingMySingleMeal";
+import CookingMyMealPage from "./templates/Cooking/pages/MyRecipes/CookingMyMealPage";
 
 // Meal Loader Function for Cooking Template
+
+export const mealsBySearch: LoaderFunction = async ({
+  params,
+  request: { signal },
+}: any): Promise<MealsLoaderBySearch> => {
+  const searchTerm = params.searchTerm;
+
+  if (!searchTerm) {
+    throw new Response("Search term is missing", { status: 400 });
+  }
+
+  try {
+    const response = await axios.get(`${SEARCH_URL}${searchTerm}`, {
+      signal,
+    });
+
+    const searchedMeals = response.data.meals || [];
+
+    return {
+      searchedMeals,
+    };
+  } catch (error: any) {
+    if (error.name === "CanceledError") {
+      console.log("Request was cancelled");
+    } else {
+      console.error("Failed to fetch meals:", error.message);
+    }
+    throw new Response("Failed to load category data", { status: 500 });
+  }
+};
+
 export const mealsLoader: LoaderFunction = async ({
   params,
   request: { signal },
@@ -117,7 +153,17 @@ const router = createBrowserRouter([
     ),
 
     children: [
-      { index: true, path: "", element: <CookingHome /> },
+      {
+        index: true,
+        path: "",
+        element: <CookingHomePage />,
+      },
+      {
+        path: "meals/:searchTerm",
+        element: <CookingHomeSearch />,
+        loader: mealsBySearch,
+        errorElement: <div>Failed to load meals. Please try again later.</div>,
+      },
       {
         path: "meal/category/:name",
         element: <CookingCategoryPage />,
@@ -131,6 +177,7 @@ const router = createBrowserRouter([
         errorElement: <div>Failed to load meal. Please try again later.</div>,
       },
       { path: "myRecipes", element: <CookingMyRecipesPage /> },
+      { path: "myRecipes/:id", element: <CookingMyMealPage /> },
     ],
   },
 ]);

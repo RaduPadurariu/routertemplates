@@ -13,9 +13,7 @@ const CookingMealDetailsPage = () => {
     useCookingMealContext();
 
   const meal = useLoaderData() as CookingSingleFetchMeal[];
-  useEffect(() => {
-    console.log(meal);
-  }, []);
+
   let ingredientsArr: string[] = [];
   let measuresArr: string[] = [];
   let singleMeal: CookingSingleMeal = {
