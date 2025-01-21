@@ -3,7 +3,7 @@ import styles from "./CookingHeader.module.scss";
 import { ChangeEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const CookingSearchForm = () => {
+const CookingMySearchForm = () => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -50,4 +50,4 @@ const CookingSearchForm = () => {
   );
 };
 
-export default CookingSearchForm;
+export default CookingMySearchForm;

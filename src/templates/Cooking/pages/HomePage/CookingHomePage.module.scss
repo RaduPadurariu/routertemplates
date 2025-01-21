@@ -1,0 +1,8 @@
+@use "../../../../styles/global" as *;
+
+.cooking-homeError {
+  text-align: center;
+  font-size: 1.2rem;
+  color: $cooking-clr-orange;
+  margin-top: 20px;
+}

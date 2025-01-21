@@ -35,6 +35,10 @@ export interface MealsLoaderData {
   categoryName: string;
 }
 
+export interface MealsLoaderBySearch {
+  searchedMeals: CookingMeal[];
+}
+
 export interface CookingSingleFetchMeal {
   idMeal: string;
   strMeal: string;

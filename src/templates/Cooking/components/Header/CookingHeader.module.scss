@@ -5,8 +5,17 @@
   &__content {
     @include flex($align: center, $justify: center, $direction: column);
     height: 400px;
+  }
+
+  &__image {
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
       url("/images/Templates/Cooking/header_image.jpg") center/cover no-repeat;
+  }
+
+  &__myImage {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)),
+      url("/images/Templates/Cooking/Multicooker_Philips.jpg") center/cover
+        no-repeat;
   }
 
   h1 {
