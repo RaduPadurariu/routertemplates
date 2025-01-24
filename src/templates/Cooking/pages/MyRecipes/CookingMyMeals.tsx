@@ -15,7 +15,7 @@ const CookingMyMeals: React.FC<MyCookingMealsProps> = ({ meals }) => {
   return (
     <div className={styles["cooking-mealList"]}>
       <div className="cooking-container">
-        <div className={styles["cooking-mealList__title"]}>retete</div>
+        <div className={styles["cooking-mealList__title"]}>meals</div>
         <section className={styles["cooking-mealList__section"]}>
           {meals?.map((mealItem) => {
             const { id, title, thumbnail } = mealItem;
