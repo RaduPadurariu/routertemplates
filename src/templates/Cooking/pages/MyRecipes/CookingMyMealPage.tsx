@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom";
-import { CookingSingleMeal } from "../../types/types";
-import CookingMySingleMeal from "./CookingMySingleMeal";
+import { CookingPersonalSingleMeal } from "../../types/types";
 
 import { myRecipesList } from "../../../../data/cookingData";
+import CookingMySingleMeal from "./CookingMySingleMeal";
 
 const CookingMyMealPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -17,10 +17,8 @@ const CookingMyMealPage = () => {
     return <p>Meal not found.</p>;
   }
 
-  const singleMeal: CookingSingleMeal = {
+  const singleMeal: CookingPersonalSingleMeal = {
     ...meal,
-    ingredients: meal.ingredients || [],
-    measures: meal.measures || [],
   };
 
   return <CookingMySingleMeal meal={singleMeal} />;

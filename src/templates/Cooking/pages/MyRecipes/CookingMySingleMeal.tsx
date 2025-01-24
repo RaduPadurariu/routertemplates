@@ -1,17 +1,12 @@
 import styles from "./CookingMyRecipesPage.module.scss";
 
-import { CookingSingleMeal } from "../../types/types";
+import { CookingPersonalSingleMeal } from "../../types/types";
 import { Link } from "react-router-dom";
 import { AiFillHome, AiOutlineCheckSquare } from "react-icons/ai";
 import { BiChevronsRight } from "react-icons/bi";
 import { FaUtensilSpoon } from "react-icons/fa";
 
-const CookingMySingleMeal = ({ meal }: { meal: CookingSingleMeal }) => {
-  let tags = meal?.tags?.split(",");
-
-  let instructions = meal?.instructions?.split("\r\n");
-  instructions = instructions?.filter((instruction) => instruction.length > 1);
-
+const CookingMySingleMeal = ({ meal }: { meal: CookingPersonalSingleMeal }) => {
   return (
     <div className={styles["cooking-singleMeal"]}>
       <div className="cooking-container">
@@ -53,14 +48,14 @@ const CookingMySingleMeal = ({ meal }: { meal: CookingSingleMeal }) => {
                       styles["cooking-singleMeal__section_grid_intro_cat_span1"]
                     }
                   >
-                    category: &nbsp;
+                    meal type: &nbsp;
                   </span>
                   <span
                     className={
                       styles["cooking-singleMeal__section_grid_intro_cat_span2"]
                     }
                   >
-                    {meal?.category}
+                    {meal?.mealCategory}
                   </span>
                 </div>
 
@@ -69,12 +64,32 @@ const CookingMySingleMeal = ({ meal }: { meal: CookingSingleMeal }) => {
                     styles["cooking-singleMeal__section_grid_intro_cat_source"]
                   }
                 >
+                  <span>Dietary Category: &nbsp;</span>
+                  {meal.nutritionalCategory}
+                </div>
+
+                <div
+                  className={
+                    styles["cooking-singleMeal__section_grid_intro_cat_source"]
+                  }
+                >
                   <span>Source: &nbsp;</span>
-                  <a href={meal.source}>
-                    {meal.source
-                      ? (meal?.source).substring(0, 40) + "..."
-                      : "Not found"}
-                  </a>
+                  {meal.source ? (
+                    <a href={meal.source}>
+                      (meal?.source).substring(0, 40) + "..."
+                    </a>
+                  ) : (
+                    "Not found"
+                  )}
+                </div>
+
+                <div
+                  className={
+                    styles["cooking-singleMeal__section_grid_intro_cat_source"]
+                  }
+                >
+                  <span>Estimated Time: &nbsp;</span>
+                  {meal.time}
                 </div>
               </div>
 
@@ -85,7 +100,7 @@ const CookingMySingleMeal = ({ meal }: { meal: CookingSingleMeal }) => {
               >
                 <h6>Tags:</h6>
                 <ul>
-                  {tags?.map((tag, idx) => (
+                  {meal.tags?.map((tag, idx) => (
                     <li key={idx}>{tag}</li>
                   ))}
                 </ul>
@@ -116,7 +131,7 @@ const CookingMySingleMeal = ({ meal }: { meal: CookingSingleMeal }) => {
                           ]
                         }
                       >
-                        {ingredient}
+                        {ingredient[0]}
                       </span>
                     </li>
                   ))}
@@ -127,9 +142,9 @@ const CookingMySingleMeal = ({ meal }: { meal: CookingSingleMeal }) => {
 
           <div className={styles["cooking-singleMeal__section_body"]}>
             <div className={styles["cooking-singleMeal__section_body_measure"]}>
-              <h6>Measure:</h6>
+              <h6>Measure ({meal?.servings}): </h6>
               <ul>
-                {meal?.measures?.map((measure, idx) => (
+                {meal?.ingredients?.map((ingredient, idx) => (
                   <li key={idx}>
                     <span
                       className={
@@ -143,7 +158,7 @@ const CookingMySingleMeal = ({ meal }: { meal: CookingSingleMeal }) => {
                         styles["cooking-singleMeal__section_body_measure-span2"]
                       }
                     >
-                      {meal?.ingredients[idx]} : {measure}
+                      {ingredient[0]} : {ingredient[1]}
                     </span>
                   </li>
                 ))}
@@ -153,7 +168,7 @@ const CookingMySingleMeal = ({ meal }: { meal: CookingSingleMeal }) => {
             <div className={styles["cooking-singleMeal__section_body_inst"]}>
               <h6>Instructions:</h6>
               <ul>
-                {instructions?.map((instruction, idx) => (
+                {meal?.instructions?.map((instruction, idx) => (
                   <li key={idx}>
                     <AiOutlineCheckSquare
                       size={18}

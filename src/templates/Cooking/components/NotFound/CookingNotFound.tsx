@@ -6,7 +6,7 @@ const CookingNotFound = () => {
       <div
         className={`cooking-container ${styles["cooking-notFound__container"]}`}
       >
-        No any food found.
+        No food found.
       </div>
     </div>
   );

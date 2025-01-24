@@ -1,6 +1,6 @@
 import { createBrowserRouter, LoaderFunction } from "react-router-dom";
 import App from "./App";
-
+import "./templates/Cooking/Cooking.scss";
 // Educational
 
 import {
@@ -37,8 +37,8 @@ import {
   MealsLoaderData,
 } from "./templates/Cooking/types/types";
 import CookingHomeSearch from "./templates/Cooking/pages/HomePage/CookingHomeSearch";
-import CookingMySingleMeal from "./templates/Cooking/pages/MyRecipes/CookingMySingleMeal";
 import CookingMyMealPage from "./templates/Cooking/pages/MyRecipes/CookingMyMealPage";
+import { CookingMyRecipesProvider } from "./templates/Cooking/context/ContextMyRecipesContext";
 
 // Meal Loader Function for Cooking Template
 
@@ -147,7 +147,9 @@ const router = createBrowserRouter([
     element: (
       <CookingSidebarProvider>
         <CookingMealProvider>
-          <CookingApp />
+          <CookingMyRecipesProvider>
+            <CookingApp />
+          </CookingMyRecipesProvider>
         </CookingMealProvider>
       </CookingSidebarProvider>
     ),
@@ -162,19 +164,31 @@ const router = createBrowserRouter([
         path: "meals/:searchTerm",
         element: <CookingHomeSearch />,
         loader: mealsBySearch,
-        errorElement: <div>Failed to load meals. Please try again later.</div>,
+        errorElement: (
+          <div className="cooking-error-page">
+            Failed to search for meals. Please try again later.
+          </div>
+        ),
       },
       {
         path: "meal/category/:name",
         element: <CookingCategoryPage />,
         loader: mealsLoader,
-        errorElement: <div>Failed to load meals. Please try again later.</div>,
+        errorElement: (
+          <div className="cooking-error-page">
+            Failed to load meals. Please try again later.
+          </div>
+        ),
       },
       {
         path: "meal/:id",
         element: <CookingMealPage />,
         loader: singleMealLoader,
-        errorElement: <div>Failed to load meal. Please try again later.</div>,
+        errorElement: (
+          <div className="cooking-error-page">
+            Failed to load meal. Please try again later.
+          </div>
+        ),
       },
       { path: "myRecipes", element: <CookingMyRecipesPage /> },
       { path: "myRecipes/:id", element: <CookingMyMealPage /> },

@@ -1,21 +1,38 @@
 import styles from "./CookingMyRecipesPage.module.scss";
 
-import { myRecipesList } from "../../../../data/cookingData";
 import CookingMyMeals from "./CookingMyMeals";
+import { useCookingMyRecipesContext } from "../../context/ContextMyRecipesContext";
+import CookingNotFound from "../../components/NotFound/CookingNotFound";
 
 const CookingMyRecipesPage = () => {
+  const { filterMeals } = useCookingMyRecipesContext();
+
   return (
     <main className={styles["cooking-categoryPage"]}>
       <div className="cooking-container">
         <div className={styles["cooking-categoryPage__desc"]}>
-          <h2>Retete Multicooker</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
-            possimus.
-          </p>
+          <h2>Retete la Multicooker</h2>
+          <ul>
+            <li>
+              {" "}
+              Multicooker-ul Philips HD 3037/70 prepară supe delicioase, carne,
+              paste și prăjituri.
+            </li>
+            <li>
+              {" "}
+              Programe de gătit inteligente și automate pentru cel mai bun
+              rezultat.
+            </li>
+            <li>Recipient interior compatibil cu mașina de spălat vase.</li>
+            <li>Exterior din oțel inoxidabil pentru o curățare ușoară.</li>
+          </ul>
         </div>
       </div>
-      {myRecipesList?.length ? <CookingMyMeals meals={myRecipesList} /> : null}
+      {filterMeals?.length ? (
+        <CookingMyMeals meals={filterMeals} />
+      ) : (
+        <CookingNotFound />
+      )}
     </main>
   );
 };

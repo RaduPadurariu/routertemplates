@@ -1,23 +1,39 @@
 import { BsSearch } from "react-icons/bs";
 import styles from "./CookingHeader.module.scss";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { myRecipesList } from "../../../../data/cookingData";
+import { useCookingMyRecipesContext } from "../../context/ContextMyRecipesContext";
 
 const CookingMySearchForm = () => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
 
+  const { setFilterMeals } = useCookingMyRecipesContext();
+
+  useEffect(() => {
+    // Debouncing
+    const delaySearch = setTimeout(() => {
+      setFilterMeals(
+        myRecipesList.filter((recipe) => {
+          return (
+            recipe.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            recipe.tags.some((tag) =>
+              tag.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+          );
+        })
+      );
+    }, 300);
+
+    return () => clearTimeout(delaySearch);
+  }, [searchTerm, myRecipesList]);
+
   const handleSearchTerm = (e: ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
 
-    let value = e.target.value.trimStart();
-    value = value.replace(/[^a-zA-Z0-9\s]/g, "");
-
-    if (value.length === 0) {
-      setSearchTerm("");
-    } else {
-      setSearchTerm(value);
-    }
+    const searchMenu = e.target.value.toLowerCase();
+    setSearchTerm(searchMenu);
   };
 
   const handleSearchResult = (e: React.FormEvent) => {
@@ -25,7 +41,7 @@ const CookingMySearchForm = () => {
     if (searchTerm.trim().length === 0) {
       console.log(searchTerm.trim());
     } else {
-      navigate(`/cooking/meals/${encodeURIComponent(searchTerm.trim())}`);
+      navigate(`/cooking/myRecipes`);
     }
   };
 

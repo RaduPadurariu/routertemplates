@@ -66,3 +66,17 @@ export interface CookingSingleMeal {
   ingredients: string[];
   measures: string[];
 }
+
+export interface CookingPersonalSingleMeal {
+  id: string;
+  title: string;
+  mealCategory: string;
+  nutritionalCategory: string;
+  servings: string;
+  thumbnail: string;
+  source: string;
+  instructions: string[];
+  tags?: string[];
+  ingredients: string[][];
+  time: string;
+}
