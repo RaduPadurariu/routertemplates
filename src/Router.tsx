@@ -39,6 +39,7 @@ import {
 import CookingHomeSearch from "./templates/Cooking/pages/HomePage/CookingHomeSearch";
 import CookingMyMealPage from "./templates/Cooking/pages/MyRecipes/CookingMyMealPage";
 import { CookingMyRecipesProvider } from "./templates/Cooking/context/ContextMyRecipesContext";
+import FitnessApp from "./templates/Fitness/FitnessApp";
 
 // Meal Loader Function for Cooking Template
 
@@ -194,6 +195,9 @@ const router = createBrowserRouter([
       { path: "myRecipes/:id", element: <CookingMyMealPage /> },
     ],
   },
+
+  // Fitness
+  { path: "/fitness", element: <FitnessApp /> },
 ]);
 
 export default router;
