@@ -23,7 +23,7 @@ const FitnessNavbar = () => {
         nav ? styles["fitness-nav__active"] : ""
       }`}
     >
-      <Link to="#" className={styles["fitness-nav__logo"]}>
+      <Link to="/fitness" className={styles["fitness-nav__logo"]}>
         <img src="/images/Templates/Fitness/logo.png" alt="no-logo" />
       </Link>
 
