@@ -1,10 +1,12 @@
 import FitnessNavbar from "./components/Navbar/FitnessNavbar";
+import FitnessHeader from "./components/pages/Header/FitnessHeader";
 import "./Fitness.scss";
 
 const FitnessApp = () => {
   return (
     <div className="fitness-template">
       <FitnessNavbar />
+      <FitnessHeader />
 
       <div className="fitness-test">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, nam
