@@ -1,0 +1,80 @@
+@use "../../../../../styles/global" as *;
+
+.fitness-offer {
+  padding-top: 30px;
+  width: 100%;
+  height: 768px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/images/Templates/Fitness/offer.png");
+  text-align: center;
+
+  &__heading {
+    text-align: center;
+    font-family: $fitness-font-family;
+    max-width: 600px;
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    @include flex($direction: column, $align: center);
+    transform: translate(-50%, -55%);
+
+    span {
+      color: $fitness-primary-color;
+    }
+
+    &_details {
+      font-size: 1.2rem;
+      color: $fitness-muted-text;
+    }
+
+    h1 {
+      font-family: $fitness-font-family;
+      font-size: 4rem;
+      margin: 0px;
+      letter-spacing: 2px;
+      color: $white-text;
+      font-weight: bold;
+    }
+
+    &_prBtns {
+      @include flex();
+      margin-top: 40px;
+
+      a {
+        width: 160px;
+        height: 50px;
+        @include flex($justify: center, $align: center);
+        font-size: 1.4rem;
+        background-color: $fitness-primary-color;
+        box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
+        border-radius: 5px;
+        color: $white-text;
+
+        &:hover {
+          background-color: transparent;
+          transition: all ease 0.5s;
+          color: $white-text;
+          border: 2px solid $fitness-primary-color;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1200px) {
+  .fitness-offer {
+    &__heading {
+      h1 {
+        font-size: 3rem;
+      }
+
+      &_details {
+        font-size: 1rem;
+      }
+    }
+  }
+}
