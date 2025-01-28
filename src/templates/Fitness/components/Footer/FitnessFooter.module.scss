@@ -1,0 +1,15 @@
+@use "../../../../styles/global" as *;
+
+.fitness-footer {
+  padding: 20px 15px;
+  text-align: center;
+  color: $fitness-muted-text;
+  font-size: 1rem;
+
+  span {
+    a {
+      color: $fitness-muted-text;
+      cursor: pointer;
+    }
+  }
+}

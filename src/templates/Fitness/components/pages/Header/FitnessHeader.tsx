@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./FitnessHeader.module.scss";
 
 const FitnessHeader = () => {
@@ -13,7 +14,7 @@ const FitnessHeader = () => {
         </h1>
         <p>Build Your Body And Fitness With Professional Touch</p>
         <div className={styles["fitness-header__heading_btns"]}>
-          <a href="#">JOIN US</a>
+          <Link to="#">JOIN US</Link>
         </div>
       </div>
     </div>
