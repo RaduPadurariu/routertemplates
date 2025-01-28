@@ -1,0 +1,88 @@
+@use "../../../../../styles/global" as *;
+
+.fitness-about {
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  @include flex($align: center, $justify: center);
+  padding: 50px 15px 50px 15px;
+  position: relative;
+  max-width: 1300px;
+  margin: 0 auto;
+
+  &__image {
+    flex: 1;
+    text-align: right;
+    width: 50%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    width: 50%;
+    color: $white-text;
+    list-style: circle;
+    flex: 1;
+    margin-left: 5rem;
+
+    h1 {
+      font-size: 3rem;
+      color: $fitness-primary-color;
+      font-weight: 500;
+      margin: 0px;
+      padding: 0px;
+      font-weight: bold;
+    }
+
+    p {
+      width: 80%;
+      font-size: 1.2rem;
+      color: $fitness-muted-text;
+    }
+
+    button {
+      margin-top: 20px;
+      width: 140px;
+      height: 45px;
+      border-radius: 10px;
+      border: none;
+      outline: none;
+      color: $white-text;
+      background-color: $fitness-primary-color;
+
+      &:hover {
+        box-shadow: 5px 10px 30px rgba(255, 2, 2, 0.336);
+        background-color: $black-text;
+        transition: all ease 0.3s;
+        color: $white-text;
+      }
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1100px) {
+  .fitness-about {
+    @include flex($direction: column, $align: center, $justify: center);
+
+    &__image {
+      margin-bottom: 5rem;
+      width: 90%;
+    }
+
+    &__text {
+      width: 100%;
+      @include flex($align: center, $justify: center, $direction: column);
+      text-align: center;
+      margin-left: 0;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}

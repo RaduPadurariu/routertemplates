@@ -1,4 +1,5 @@
 import FitnessNavbar from "./components/Navbar/FitnessNavbar";
+import FitnessAbout from "./components/pages/About/FitnessAbout";
 import FitnessFeature from "./components/pages/Feature/FitnessFeature";
 import FitnessHeader from "./components/pages/Header/FitnessHeader";
 import FitnessOffer from "./components/pages/Offer/FitnessOffer";
@@ -11,6 +12,7 @@ const FitnessApp = () => {
       <FitnessHeader />
       <FitnessFeature />
       <FitnessOffer />
+      <FitnessAbout />
     </div>
   );
 };
