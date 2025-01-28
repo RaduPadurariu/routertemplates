@@ -514,6 +514,7 @@ nav .menu-btn,
     margin-bottom: 100px;
   }
 }
+
 @media (max-width: 600px) {
   .name {
     width: 60%;

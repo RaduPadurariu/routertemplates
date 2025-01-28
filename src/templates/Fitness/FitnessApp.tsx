@@ -1,4 +1,5 @@
 import FitnessNavbar from "./components/Navbar/FitnessNavbar";
+import FitnessFeature from "./components/pages/Feature/FitnessFeature";
 import FitnessHeader from "./components/pages/Header/FitnessHeader";
 import "./Fitness.scss";
 
@@ -7,7 +8,7 @@ const FitnessApp = () => {
     <div className="fitness-template">
       <FitnessNavbar />
       <FitnessHeader />
-
+      <FitnessFeature />
       <div className="fitness-test">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, nam
         rerum minus quos modi hic suscipit odit laboriosam veritatis iure sequi

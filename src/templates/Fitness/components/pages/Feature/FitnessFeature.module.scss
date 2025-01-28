@@ -1,0 +1,135 @@
+@use "../../../../../styles/global" as *;
+
+// Feature
+
+#fitness-features {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: $fitness-font-family;
+  @include flex($justify: center, $align: center, $direction: column);
+  padding: 80px 0;
+  background-color: $black-text;
+}
+
+.fitness-features {
+  h1 {
+    color: $white-text;
+    font-size: 3rem;
+    margin: 50px 0;
+  }
+
+  &__container {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+  }
+}
+
+// Feature Box
+
+.fitness-featureBox {
+  background-color: $black-text;
+  width: 250px;
+  height: 400px;
+  margin: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.4s ease-in-out;
+  position: relative;
+  cursor: pointer;
+
+  &__img {
+    width: 100%;
+    height: 60%;
+
+    img {
+      padding: 15px;
+      margin-top: 40px;
+      width: 100%;
+      height: 50%;
+    }
+  }
+
+  &:hover {
+    border: 1px solid $fitness-primary-color;
+    box-shadow: 2px 2px 12px rgba(184, 0, 0, 0.445);
+  }
+
+  &__text {
+    width: 100%;
+    height: 40%;
+    background-color: $black-text;
+    @include flex($justify: center, $align: center, $direction: column);
+    text-align: center;
+
+    h2 {
+      color: $white-text;
+    }
+
+    p {
+      margin: 0px;
+      color: $fitness-muted-text;
+      font-size: 1.1rem;
+      font-family: $fitness-font-family;
+      display: block;
+      max-width: 80%;
+      margin-top: 5px;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 10px;
+
+      &:hover {
+        color: $white-text;
+      }
+    }
+
+    a {
+      margin-top: 15px;
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1200px) {
+  .fitness-features {
+    height: auto;
+
+    h1 {
+      font-size: 2rem;
+    }
+    &__container {
+      ul {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  }
+
+  .fitness-featureBox {
+    flex-grow: 1;
+    margin: 0;
+    &__img img {
+      object-fit: contain;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .fitness-features {
+    &__container {
+      ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+
+  .fitness-featureBox {
+    width: 90%;
+    margin: 0 auto;
+    height: 400px;
+  }
+}
