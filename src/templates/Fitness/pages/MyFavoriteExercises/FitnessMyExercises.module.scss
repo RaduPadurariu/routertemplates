@@ -1,0 +1,21 @@
+@use "../../../../styles/global" as *;
+
+.fitness-myExercises {
+  // color: white;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // padding-top: 80px;
+
+  &__list {
+    background-color: $fitness-secondary-bg-color;
+
+    &_days {
+      border-right: 2px solid #fff5f5;
+    }
+
+    &_card {
+      width: 100% !important;
+    }
+  }
+}

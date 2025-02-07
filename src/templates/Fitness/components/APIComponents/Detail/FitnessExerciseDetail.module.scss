@@ -1,0 +1,15 @@
+@use "../../../../../styles/global.scss" as *;
+
+.fitness-detail__image {
+  width: 729px;
+  height: 742px;
+}
+
+// Responsive
+
+@media screen and (max-width: 1200px) {
+  .fitness-detail__image {
+    width: 300px;
+    height: 300px;
+  }
+}

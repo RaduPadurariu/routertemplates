@@ -1,8 +1,7 @@
 import { useState } from "react";
 import styles from "./FitnessNavbar.module.scss";
-import { Link } from "react-scroll";
 import { fitnessNavLinks } from "../../../../data/fitnessData";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const FitnessNavbar = () => {
   const [nav, setNav] = useState(false);
@@ -17,13 +16,23 @@ const FitnessNavbar = () => {
 
   window.addEventListener("scroll", changeBackground);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <nav
       className={`${styles["fitness-nav"]} ${
         nav ? styles["fitness-nav__active"] : ""
       }`}
     >
-      <Link to="/fitness" className={styles["fitness-nav__logo"]}>
+      <Link
+        to="/fitness"
+        className={styles["fitness-nav__logo"]}
+        onClick={scrollToTop}
+      >
         <img src="/images/Templates/Fitness/logo.png" alt="no-logo" />
       </Link>
 

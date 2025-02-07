@@ -40,6 +40,10 @@ import CookingHomeSearch from "./templates/Cooking/pages/HomePage/CookingHomeSea
 import CookingMyMealPage from "./templates/Cooking/pages/MyRecipes/CookingMyMealPage";
 import { CookingMyRecipesProvider } from "./templates/Cooking/context/ContextMyRecipesContext";
 import FitnessApp from "./templates/Fitness/FitnessApp";
+import FitnessHome from "./templates/Fitness/pages/Home/FitnessHome";
+import FitnessAPIExercises from "./templates/Fitness/pages/APIExercises/FitnessAPIExercises";
+import FitnessMyExercises from "./templates/Fitness/pages/MyFavoriteExercises/FitnessMyExercises";
+import FitnessAPIExerciseDetail from "./templates/Fitness/pages/APIExerciseDetail/FitnessAPIExerciseDetail";
 
 // Meal Loader Function for Cooking Template
 
@@ -197,7 +201,21 @@ const router = createBrowserRouter([
   },
 
   // Fitness
-  { path: "/fitness", element: <FitnessApp /> },
+  {
+    path: "/fitness",
+    element: <FitnessApp />,
+    children: [
+      {
+        index: true,
+        path: "",
+        element: <FitnessHome />,
+      },
+      { path: ":section", element: <FitnessHome /> },
+      { path: "apiExercises", element: <FitnessAPIExercises /> },
+      { path: "exercise/:id", element: <FitnessAPIExerciseDetail /> },
+      { path: "myExercises", element: <FitnessMyExercises /> },
+    ],
+  },
 ]);
 
 export default router;
