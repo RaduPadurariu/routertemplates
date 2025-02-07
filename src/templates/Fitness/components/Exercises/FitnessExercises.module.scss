@@ -1,0 +1,52 @@
+@use "../../../../styles/global" as *;
+
+// Feature
+
+#fitness-features {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-family: $fitness-font-family;
+  @include flex($justify: center, $align: center, $direction: column);
+  padding: 80px 0;
+  background-color: $black-text;
+}
+
+.fitness-features {
+  h1 {
+    color: $white-text;
+    font-size: 3rem;
+    margin: 50px 0;
+    font-weight: bold;
+  }
+
+  &__container {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 1200px) {
+  .fitness-features {
+    height: auto;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .fitness-features {
+    &__container {
+      ul {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

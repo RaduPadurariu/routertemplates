@@ -1,0 +1,28 @@
+.fitness-bodyPart-card {
+  border-radius: 0;
+  border-bottom-right-radius: 0;
+  transform: scale(1, 1);
+  transition: 0.3s all ease-in-out;
+
+  &__border {
+    border-top: 4px solid red;
+  }
+
+  &:first-child {
+    border-bottom-left-radius: 0;
+  }
+  &:hover {
+    transform: scale(1.1, 1.1);
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 576px) {
+  .fitness-bodyPart-card {
+    &:first-child {
+      width: 150px;
+      height: 150px;
+    }
+  }
+}
