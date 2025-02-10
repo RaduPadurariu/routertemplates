@@ -7,6 +7,8 @@ import { useState } from "react";
 const FitnessMyExercises = () => {
   const [selectedDay, setSelectedDay] = useState(days[0]);
   const [showPrimary, setShowPrimary] = useState(true);
+  const [languageChange, setLanguageChange] = useState(true);
+
   return (
     <div className={styles["fitness-myExercises"]}>
       <FitnessHeader
@@ -19,6 +21,38 @@ const FitnessMyExercises = () => {
         link="/fitness"
       />
       <div className={styles["fitness-myExercises__list"]}>
+        <Box
+          sx={{
+            maxWidth: 900,
+            margin: "auto",
+            padding: "3rem 2rem 2rem 2rem",
+            backgroundColor: "#fff5f5",
+            display: "flex",
+            justifyContent: "center",
+            gap: "1rem",
+          }}
+        >
+          <Button onClick={() => setLanguageChange(true)} variant="contained">
+            <img
+              src="/images/Templates/Fitness/API/Personal/gb.png"
+              alt="English Flag"
+              width="24"
+              height="16"
+              style={{ marginRight: 8 }}
+            />
+            English
+          </Button>
+          <Button onClick={() => setLanguageChange(false)} variant="contained">
+            <img
+              src="/images/Templates/Fitness/API/Personal/ro.png"
+              alt="Romanian Flag"
+              width="24"
+              height="16"
+              style={{ marginRight: 8 }}
+            />
+            Romana
+          </Button>
+        </Box>
         <Box
           sx={{
             maxWidth: 900,
@@ -57,7 +91,7 @@ const FitnessMyExercises = () => {
                   "&:hover": { backgroundColor: "#fff5f5" },
                 }}
               >
-                {day.day}
+                {languageChange ? day.day.en : day.day.ro}
               </Button>
             ))}
           </Stack>
@@ -97,7 +131,9 @@ const FitnessMyExercises = () => {
               }}
               onClick={() => setShowPrimary(true)}
             >
-              {selectedDay.primaryWorkout}
+              {languageChange
+                ? selectedDay.primaryWorkout.en
+                : selectedDay.primaryWorkout.ro}
             </Button>
             <Button
               sx={{
@@ -123,7 +159,9 @@ const FitnessMyExercises = () => {
               }}
               onClick={() => setShowPrimary(false)}
             >
-              {selectedDay.secondaryWorkout}
+              {languageChange
+                ? selectedDay.secondaryWorkout.en
+                : selectedDay.secondaryWorkout.ro}
             </Button>
           </Box>
 
@@ -153,8 +191,8 @@ const FitnessMyExercises = () => {
                 >
                   <CardMedia
                     component="img"
-                    image={`/images/Templates/Fitness/API/Personal/${exercise.src}`}
-                    alt={exercise.name}
+                    image={`/images/Templates/Fitness/API/Personal/${exercise?.src}`}
+                    alt={"no-name"}
                   />
                   <Typography
                     variant="body1"
@@ -162,7 +200,7 @@ const FitnessMyExercises = () => {
                     mt={2}
                     sx={{ color: "black", fontWeight: "bold" }}
                   >
-                    {exercise.name}
+                    {languageChange ? exercise.name.en : exercise.name.ro}
                   </Typography>
                 </Card>
               </Box>

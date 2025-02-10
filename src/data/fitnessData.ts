@@ -32,75 +32,186 @@ export const fitnessExercises = [
 export const days = [
   {
     id: 1,
-    day: "MONDAY",
-    primaryWorkout: "Biceps",
+    day: { en: "MONDAY", ro: "Luni" },
+    primaryWorkout: { en: "Biceps", ro: "Biceps" },
     primaryWorkoutSrc: [
-      { name: "Assisted Pull-Ups", src: "Biceps1.gif" },
-      { name: "Dumbbell Bicep Curls", src: "Biceps2.gif" },
+      {
+        name: { en: "Assisted Pull-Ups", ro: "Tractiuni asistate" },
+        src: "Biceps1.gif",
+      },
+      {
+        name: { en: "Dumbbell Bicep Curls", ro: "Flexii biceps cu gantere" },
+        src: "Biceps2.gif",
+      },
     ],
-    secondaryWorkout: "Calves",
+    secondaryWorkout: { en: "Calves", ro: "Gambe" },
     secondaryWorkoutSrc: [
-      { name: "Donkey Calf Raises", src: "Gambe1.gif" },
-      { name: "Dumbbell Calf Raise", src: "Gambe2.gif" },
+      {
+        name: { en: "Donkey Calf Raises", ro: "Ridicări pe vârfuri" },
+        src: "Gambe1.gif",
+      },
+      {
+        name: {
+          en: "Dumbbell Calf Raise",
+          ro: "Ridicari pe varfuri cu gantere",
+        },
+        src: "Gambe2.gif",
+      },
     ],
   },
+
   {
     id: 2,
-    day: "TUESDAY",
-    primaryWorkout: "Chest",
+    day: { en: "TUESDAY", ro: "Marti" },
+    primaryWorkout: { en: "Chest", ro: "Piept" },
     primaryWorkoutSrc: [
-      { name: "Push-Ups", src: "Piept1.gif" },
-      { name: "Dumbbell Bench Press", src: "Piept2.gif" },
+      { name: { en: "Push-Ups", ro: "Flotari" }, src: "Piept1.gif" },
+      {
+        name: { en: "Dumbbell Bench Press", ro: "Impins cu gantere" },
+        src: "Piept2.gif",
+      },
     ],
-    secondaryWorkout: "Abs",
+    secondaryWorkout: { en: "Abs", ro: "Abdomen" },
     secondaryWorkoutSrc: [
-      { name: "Crunches", src: "Abdomen1.gif" },
-      { name: "Bicycle Crunches", src: "Abdomen2.gif" },
+      { name: { en: "Crunches", ro: "Abdomene" }, src: "Abdomen1.gif" },
+      {
+        name: { en: "Bicycle Crunches", ro: "Abdomene bicicleta" },
+        src: "Abdomen2.gif",
+      },
     ],
   },
-
   {
     id: 3,
-    day: "WEDNESDAY",
-    primaryWorkout: "Triceps",
+    day: { en: "WEDNESDAY", ro: "Miercuri" },
+    primaryWorkout: { en: "Triceps", ro: "Triceps" },
     primaryWorkoutSrc: [
-      { name: "Dips", src: "Triceps1.gif" },
-      { name: "Dumbbell Pullover", src: "Triceps2.gif" },
+      { name: { en: "Dips", ro: "Flotari la paralele" }, src: "Triceps1.gif" },
+      {
+        name: { en: "Dumbbell Pullover", ro: "Pullover cu gantera" },
+        src: "Triceps2.gif",
+      },
     ],
-    secondaryWorkout: "Traps",
+    secondaryWorkout: { en: "Traps", ro: "Trapez" },
     secondaryWorkoutSrc: [
-      { name: "Dumbbell Shrugs", src: "Trapez1.gif" },
-      { name: "Face Pull", src: "Trapez2.gif" },
+      {
+        name: { en: "Dumbbell Shrugs", ro: "Ridicari din umeri cu gantere" },
+        src: "Trapez1.gif",
+      },
+      {
+        name: { en: "Face Pull", ro: "Tractiunii la scripete pentru fata" },
+        src: "Trapez2.gif",
+      },
     ],
   },
-
   {
     id: 4,
-    day: "THURSDAY",
-    primaryWorkout: "Back",
+    day: { en: "THURSDAY", ro: "Joi" },
+    primaryWorkout: { en: "Back", ro: "Spate" },
     primaryWorkoutSrc: [
-      { name: "Pull-Up", src: "Spate1.gif" },
-      { name: "Bent-over Dumbbell Rows", src: "Spate2.gif" },
+      { name: { en: "Pull-Up", ro: "Tractiuni spate" }, src: "Spate1.gif" },
+      {
+        name: { en: "Bent-over Dumbbell Rows", ro: "Ramat cu gantere" },
+        src: "Spate2.gif",
+      },
     ],
-    secondaryWorkout: "Forearm",
+    secondaryWorkout: { en: "Forearm", ro: "Antebrat" },
     secondaryWorkoutSrc: [
-      { name: "Close-Grip Pull-Up", src: "Antebrat1.gif" },
-      { name: "Seated Dumbbell Wrist Curl", src: "Antebrat2.gif" },
+      {
+        name: { en: "Close-Grip Pull-Up", ro: "Tractiuni cu priza ingusta" },
+        src: "Antebrat1.gif",
+      },
+      {
+        name: {
+          en: "Seated Dumbbell Wrist Curl",
+          ro: "Flexii de incheietura cu gantere",
+        },
+        src: "Antebrat2.gif",
+      },
     ],
   },
-
   {
     id: 5,
-    day: "FRIDAY",
-    primaryWorkout: "Shoulders",
+    day: { en: "FRIDAY", ro: "Vineri" },
+    primaryWorkout: { en: "Shoulders", ro: "Umeri" },
     primaryWorkoutSrc: [
-      { name: "Pike Push-Ups", src: "Umeri1.gif" },
-      { name: "Seated Dumbbell Press", src: "Umeri2.gif" },
+      { name: { en: "Pike Push-Ups", ro: "Flotari Pike" }, src: "Umeri1.gif" },
+      {
+        name: {
+          en: "Seated Dumbbell Press",
+          ro: "Impins deasupra capului cu gantere",
+        },
+        src: "Umeri2.gif",
+      },
     ],
-    secondaryWorkout: "Thighs",
+    secondaryWorkout: { en: "Thighs", ro: "Coapse" },
     secondaryWorkoutSrc: [
-      { name: "Dumbbell Squat", src: "Coapse1.gif" },
-      { name: "Dumbbell Lunge", src: "Coapse2.gif" },
+      {
+        name: { en: "Dumbbell Squat", ro: "Genuflexiuni cu gantere" },
+        src: "Coapse1.gif",
+      },
+      {
+        name: { en: "Dumbbell Lunge", ro: "Fandari cu gantere" },
+        src: "Coapse2.gif",
+      },
     ],
   },
+  // {
+  //   id: 2,
+  //   day: "TUESDAY",
+  //   primaryWorkout: "Chest",
+  //   primaryWorkoutSrc: [
+  //     { name: "Push-Ups", src: "Piept1.gif" },
+  //     { name: "Dumbbell Bench Press", src: "Piept2.gif" },
+  //   ],
+  //   secondaryWorkout: "Abs",
+  //   secondaryWorkoutSrc: [
+  //     { name: "Crunches", src: "Abdomen1.gif" },
+  //     { name: "Bicycle Crunches", src: "Abdomen2.gif" },
+  //   ],
+  // },
+
+  // {
+  //   id: 3,
+  //   day: "WEDNESDAY",
+  //   primaryWorkout: "Triceps",
+  //   primaryWorkoutSrc: [
+  //     { name: "Dips", src: "Triceps1.gif" },
+  //     { name: "Dumbbell Pullover", src: "Triceps2.gif" },
+  //   ],
+  //   secondaryWorkout: "Traps",
+  //   secondaryWorkoutSrc: [
+  //     { name: "Dumbbell Shrugs", src: "Trapez1.gif" },
+  //     { name: "Face Pull", src: "Trapez2.gif" },
+  //   ],
+  // },
+
+  // {
+  //   id: 4,
+  //   day: "THURSDAY",
+  //   primaryWorkout: "Back",
+  //   primaryWorkoutSrc: [
+  //     { name: "Pull-Up", src: "Spate1.gif" },
+  //     { name: "Bent-over Dumbbell Rows", src: "Spate2.gif" },
+  //   ],
+  //   secondaryWorkout: "Forearm",
+  //   secondaryWorkoutSrc: [
+  //     { name: "Close-Grip Pull-Up", src: "Antebrat1.gif" },
+  //     { name: "Seated Dumbbell Wrist Curl", src: "Antebrat2.gif" },
+  //   ],
+  // },
+
+  // {
+  //   id: 5,
+  //   day: "FRIDAY",
+  //   primaryWorkout: "Shoulders",
+  //   primaryWorkoutSrc: [
+  //     { name: "Pike Push-Ups", src: "Umeri1.gif" },
+  //     { name: "Seated Dumbbell Press", src: "Umeri2.gif" },
+  //   ],
+  //   secondaryWorkout: "Thighs",
+  //   secondaryWorkoutSrc: [
+  //     { name: "Dumbbell Squat", src: "Coapse1.gif" },
+  //     { name: "Dumbbell Lunge", src: "Coapse2.gif" },
+  //   ],
+  // },
 ];

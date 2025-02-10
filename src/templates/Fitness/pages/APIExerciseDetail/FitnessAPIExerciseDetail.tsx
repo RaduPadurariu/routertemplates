@@ -84,8 +84,8 @@ const FitnessAPIExerciseDetail = () => {
     <div>
       <FitnessHeader
         text="FITNESS CLUB"
-        title1="Sweat, Smile and Repeat"
-        title2=""
+        title1="Sweat, Smile "
+        title2="and Repeat"
         description="Check out the most effective exercises personalized to you"
         button="BACK"
         classHeight="100%"
