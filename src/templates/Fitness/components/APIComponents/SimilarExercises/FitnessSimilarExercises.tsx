@@ -22,7 +22,11 @@ const FitnessSimilarExercises: React.FC<FitnessExerciseSimilarProps> = ({
         </span>{" "}
         exercises
       </Typography>
-      <Stack direction="row" sx={{ p: 2, position: "relative" }}>
+      <Stack
+        direction="row"
+        sx={{ p: 2, position: "relative" }}
+        justifyContent={"center"}
+      >
         {targetMuscleExercises.length !== 0 ? (
           <FitnessHorizontalScrollbar data={targetMuscleExercises} />
         ) : (
@@ -45,7 +49,11 @@ const FitnessSimilarExercises: React.FC<FitnessExerciseSimilarProps> = ({
         </span>{" "}
         exercises
       </Typography>
-      <Stack direction="row" sx={{ p: 2, position: "relative" }}>
+      <Stack
+        direction="row"
+        sx={{ p: 2, position: "relative" }}
+        justifyContent={"center"}
+      >
         {equipmentExercises.length !== 0 ? (
           <FitnessHorizontalScrollbar data={equipmentExercises} />
         ) : (

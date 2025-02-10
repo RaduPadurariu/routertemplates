@@ -7,9 +7,6 @@ import { FaUtensilSpoon } from "react-icons/fa";
 import { useEffect } from "react";
 
 const CookingMealSingle = ({ meal }: { meal: CookingSingleMeal }) => {
-  useEffect(() => {
-    console.log(meal);
-  }, []);
   let tags = meal?.tags?.split(",");
 
   let instructions = meal?.instructions?.split("\r\n");
