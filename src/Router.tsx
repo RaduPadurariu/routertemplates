@@ -44,6 +44,8 @@ import FitnessHome from "./templates/Fitness/pages/Home/FitnessHome";
 import FitnessAPIExercises from "./templates/Fitness/pages/APIExercises/FitnessAPIExercises";
 import FitnessMyExercises from "./templates/Fitness/pages/MyFavoriteExercises/FitnessMyExercises";
 import FitnessAPIExerciseDetail from "./templates/Fitness/pages/APIExerciseDetail/FitnessAPIExerciseDetail";
+import WellnessApp from "./templates/Wellness/WellnessApp";
+import WellnessHome from "./templates/Wellness/pages/Home/WellnessHome";
 
 // Meal Loader Function for Cooking Template
 
@@ -214,6 +216,19 @@ const router = createBrowserRouter([
       { path: "apiExercises", element: <FitnessAPIExercises /> },
       { path: "exercise/:id", element: <FitnessAPIExerciseDetail /> },
       { path: "myExercises", element: <FitnessMyExercises /> },
+    ],
+  },
+
+  // Wellness
+  {
+    path: "/wellness",
+    element: <WellnessApp />,
+    children: [
+      {
+        index: true,
+        path: "",
+        element: <WellnessHome />,
+      },
     ],
   },
 ]);
