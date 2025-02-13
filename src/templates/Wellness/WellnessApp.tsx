@@ -6,11 +6,11 @@ import "./Wellness.scss";
 
 const WellnessApp = () => {
   return (
-    <>
+    <div className="wellness-template">
       <WellnessHeader />
       <Outlet />
       <WellnessFooter />
-    </>
+    </div>
   );
 };
 
