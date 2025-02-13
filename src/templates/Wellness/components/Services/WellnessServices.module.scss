@@ -1,0 +1,104 @@
+@use "../../../../styles/global" as *;
+
+.wellness-services {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 15%;
+  padding-right: 15%;
+
+  &__items {
+    &_item {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2.5rem;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      margin-right: auto;
+
+      &_info {
+        h1 {
+          margin: 0;
+          margin-bottom: 0.75rem;
+          font-weight: bold;
+          font-size: 3.75rem;
+          line-height: 1;
+        }
+
+        p {
+          margin: 0;
+          color: $black-text;
+          font-size: 16px;
+          line-height: 1.4;
+        }
+
+        &_btn {
+          margin-top: 2rem;
+
+          a {
+            color: $black-text;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+            font-weight: 500;
+            background-color: $wellness-primary-color;
+            border-radius: 9999px;
+          }
+        }
+      }
+
+      &_img {
+        text-align: center;
+
+        img {
+          width: 100%;
+          height: auto;
+          max-width: 100%;
+          display: block;
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        .wellness-services__items_item_info {
+          order: 1;
+        }
+        .wellness-services__items_item_img {
+          order: 0;
+        }
+      }
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 992px) {
+  .wellness-services {
+    padding-left: 5%;
+    padding-right: 5%;
+
+    &__items_item {
+      grid-template-columns: repeat(1, 1fr);
+      &_info {
+        h1 {
+          font-size: 1.875rem;
+          line-height: 2.25rem;
+        }
+      }
+
+      &:nth-child(2),
+      &:nth-child(4) {
+        .wellness-services__items_item_info {
+          order: 0;
+        }
+        .wellness-services__items_item_img {
+          order: 1;
+        }
+      }
+    }
+  }
+}
