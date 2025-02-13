@@ -15,7 +15,7 @@ export const navTemplates = [
   { id: 1, text: "Educational", link: "/educational" },
   { id: 2, text: "Cooking", link: "/cooking" },
   { id: 3, text: "Fitness", link: "/fitness" },
-  { id: 4, text: "Fashion", link: "/" },
+  { id: 4, text: "Wellness", link: "/wellness" },
 ];
 
 export const social = [
