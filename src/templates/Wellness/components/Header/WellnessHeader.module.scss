@@ -1,0 +1,106 @@
+@use "../../../../styles/global" as *;
+
+.wellness-header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color: $white-text;
+  top: 0;
+  position: sticky;
+
+  &__navbar {
+    @include flex($align: center, $justify: space-between);
+
+    &_logo {
+      cursor: pointer;
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &_menu {
+      ul {
+        @include flex();
+
+        li {
+          font-weight: 500;
+          margin-left: 1rem;
+          margin-right: 1rem;
+
+          a {
+            font-family: $wellness-navbar-font-family;
+            color: $black-text;
+
+            &:hover {
+              color: $wellness-primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    &_tryBtn {
+      display: block;
+
+      a {
+        background-color: $wellness-primary-color;
+        font-weight: 500;
+        padding: 0.75rem 3rem;
+        border-radius: 9999px;
+        color: $black-text;
+        font-family: $wellness-navbar-font-family;
+      }
+    }
+
+    &_burgerBtn {
+      display: none;
+    }
+  }
+}
+
+// Responsive
+
+@media screen and (max-width: 992px) {
+  .wellness-header {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
+    &__navbar {
+      &_menu {
+        ul {
+          display: none;
+          &.sideMenu {
+            @include flex($direction: column);
+            position: absolute;
+            top: 65px;
+            padding-top: 1rem;
+            left: 0;
+            width: 100%;
+            background-color: $white-text;
+          }
+
+          li {
+            line-height: 2;
+          }
+        }
+      }
+
+      &_tryBtn {
+        display: none;
+      }
+
+      &_burgerBtn {
+        display: block;
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+          display: block;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
