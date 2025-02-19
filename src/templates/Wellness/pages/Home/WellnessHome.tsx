@@ -1,12 +1,13 @@
+import WellnessDailyRoutine from "../../components/DailyRoutine/WellnessDailyRoutine";
 import WellnessHero from "../../components/Hero/WellnessHero";
 import WellnessServices from "../../components/Services/WellnessServices";
-import styles from "./WellnessHome.module.scss";
 
 const WellnessHome = () => {
   return (
     <>
       <WellnessHero />
       <WellnessServices />
+      <WellnessDailyRoutine />
     </>
   );
 };

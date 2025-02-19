@@ -320,7 +320,7 @@ export const myRecipesList = [
     id: "30",
     title: "Fasole cu carnati",
     mealCategory: "Cina",
-    nutritionalCategory: "Proteine",
+    nutritionalCategory: "Leguminoase",
     servings: "2 portii",
     thumbnail: "/images/Templates/Cooking/MyRecipes/Fasole_Carnati.webp",
     instructions: [
@@ -351,7 +351,7 @@ export const myRecipesList = [
     id: "40",
     title: "Mazare cu pulpe de pui",
     mealCategory: "Cina",
-    nutritionalCategory: "Proteine",
+    nutritionalCategory: "Leguminoase",
     servings: "2 portii",
     thumbnail: "/images/Templates/Cooking/MyRecipes/Mazare_Pui.webp",
     instructions: [
@@ -377,7 +377,7 @@ export const myRecipesList = [
     id: "50",
     title: "Varza cu carne de porc",
     mealCategory: "Cina",
-    nutritionalCategory: "Proteine",
+    nutritionalCategory: "Leguminoase",
     servings: "2 portii",
     thumbnail: "/images/Templates/Cooking/MyRecipes/Varza_Porc.webp",
     instructions: [
