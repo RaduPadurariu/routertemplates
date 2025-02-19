@@ -1,0 +1,39 @@
+@use "../../../../styles/global" as *;
+
+.wellness-footer {
+  background-image: url("/images/Templates/Wellness/footer.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  width: 100%;
+  height: 865px;
+
+  &__container {
+    @include flex($align: center, $justify: space-between, $direction: column);
+
+    &_img {
+      padding-top: 5rem;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+
+    &_line {
+      width: 0;
+      height: 607px;
+      border: 1px dashed $wellness-line-color;
+    }
+
+    p {
+      font-weight: 500;
+      color: $black-text;
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+  }
+}

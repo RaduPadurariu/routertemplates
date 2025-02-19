@@ -30,3 +30,23 @@ export const wellnessServices = [
     src: "/images/Templates/Wellness/mindfulness.png",
   },
 ];
+
+export const wellnessRoutineList = [
+  {
+    id: 1,
+    text: "Gymnastics/Cardio",
+    icon: "FaDumbbell",
+    time: "07:30",
+  },
+  { id: 2, text: "Meditation", icon: "FaOm", time: "08:00" },
+  { id: 3, text: "Breakfast", icon: "FaAppleAlt", time: "08:15" },
+  { id: 4, text: "Work part 1", icon: "FaClock", time: "09:00" },
+  { id: 5, text: "Stretching", icon: "FaDumbbell", time: "12:00" },
+  { id: 6, text: "Lunch", icon: "FaAppleAlt", time: "12:15" },
+  { id: 7, text: "Work part 2", icon: "FaClock", time: "13:00" },
+  { id: 8, text: "Meditation", icon: "FaOm", time: "18:00" },
+  { id: 9, text: "Fitness", icon: "FaDumbbell", time: "18:15" },
+  { id: 10, text: "Dinner", icon: "FaAppleAlt", time: "19:00" },
+  { id: 11, text: "Family/Hobbies", icon: "FaUsers", time: "20:00" },
+  { id: 12, text: "Sleep", icon: "FaBed", time: "23:30" },
+];
