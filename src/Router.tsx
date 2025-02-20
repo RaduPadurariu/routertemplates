@@ -229,6 +229,7 @@ const router = createBrowserRouter([
         path: "",
         element: <WellnessHome />,
       },
+      { path: ":section", element: <WellnessHome /> },
     ],
   },
 ]);

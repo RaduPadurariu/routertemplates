@@ -9,13 +9,20 @@ const WellnessHeader = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <>
       <header className={styles["wellness-header"]}>
         <div className={styles["wellness-header__container"]}>
           <div className={styles["wellness-header__navbar"]}>
             <div className={styles["wellness-header__navbar_logo"]}>
-              <Link to="/wellness">
+              <Link to="/wellness" onClick={scrollToTop}>
                 <img src="/images/Templates/Wellness/logo.png" alt="no-logo" />
               </Link>
             </div>
