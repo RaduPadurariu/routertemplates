@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="W3 Practice Radu Padurariu" />
+    <meta name="keywords" content="w3 practice" />
+    <meta name="author" content="Radu Padurariu" />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="shortcut icon" href="../../imgs/favicon.png" type="image/x-icon" />
+    <title>W3 Practice CSS Radu Padurariu</title>
+  </head>
+  <body>
+    <header>
+        <a href="/data/websites/w3practice_tutorial/index.html"><img class="logo-img" src="../../imgs/radu.png" alt=""></a>
+        
+        <nav>
+            <ul class="nav-buttons">
+                <li><a class="nav-links" href="/data/websites/w3practice_tutorial/index.html">HTML</a> </li>
+                <li><a class="nav-links" href="/data/websites/w3practice_tutorial/html/css/index.html">CSS</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="top">W3 Tutorial practice CSS 2022 - Radu Padurariu</h1>
+
+        <article>
+            <h3>CSS Intro</h3>
+            <p>
+                <ul>
+                    <li>CSS is the language we use to style a Web page.</li>
+                    <li>CSS stands for Cascading Style Sheets.</li>
+                    <li>CSS describes how HTML elements are to be displayed on screen, paper, or in other media.</li>
+                    <li>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</li>
+                    <li>External stylesheets are stored in CSS files.</li>
+                </ul>
+                There are three ways of inserting a style sheet (priority in this order): <br>
+                <ul>
+                    <li>Inline CSS - is used to apply a unique style for a single element. Is define inside HTML element using &ltstyle&gt tag.</li>
+                    <li>Internal CSS (embed) - is used if one single HTML page has a unique style. Is defined in head section. </li>
+                    <li>External CSS - is used to change the look of the entire website. Is defined in an external file with extension .css, and HTML pages must include in head the link tag for reference. </li>
+                </ul>
+            </p>
+        </article>
+
+        <article>
+            <h3>CSS Syntax</h3>
+            <p>
+                A CSS rule consists of a selector and a declaration block (consist of property name and value). Ex: h1 {color:blue; font-size:12px;} <br>
+                <div style="display:flex;">
+                    <ul>
+                        <li>. dot</li>
+                        <li>, comma</li>
+                        <li>: colon</li>
+                        <li>; semi-colon</li>
+                        <li>' single quote</li>
+                        <li>" double quotes</li>
+                        <li>` backtick</li>
+                    </ul>
+                    <ul>
+                        <li>() paranthesis</li>
+                        <li>[] brackets</li>
+                        <li>{} braces, curly brackets</li>
+                        <li>&lt&gt angle brackets</li>
+                        <li>/ slash</li>
+                        <li>\ back slash</li>
+                        <li>| pipe</li>
+                        
+                    </ul>
+
+                    <ul>
+                        <li>+ plus sign, addition</li>
+                        <li>- minus sign, dash</li>
+                        <li>* asterisk</li>
+                        <li>= equal</li> 
+                        <li>% percent</li>
+                        <li>$ dollar</li>
+                        <li>_ underscore</li>
+                        
+                    </ul>
+
+                    <ul>
+                        <li>! exclamation mark</li>
+                        <li>? question mark</li>
+                        <li>@ at</li>
+                        <li># hash</li>
+                        <li>& ampersand</li>
+                        <li>% percent</li>
+                        <li>^ hat, exponent</li>
+                        <li>~ tilde</li>
+
+                    </ul>
+                </div>
+                
+            </p>
+        </article>
+       
+        <article>
+            <h3>CSS Selectors</h3>
+            <p>
+                CSS <strong>simple selector</strong>  - select elements based on name, id or class. <br>
+                <ul>
+                    <li>#id (#firstname) - Selects the element with id="firstname"</li>
+                    <li>.class (.intro) - Selects all elements with class="intro"</li>
+                    <li>element .class (p .intro) - Selects only &ltp&gt elements with class="intro"</li>
+                    <li>* (*) - Selects all elements. </li>
+                    <li>element (p) - Selects all &ltp&gt elements.</li>
+                    <li>element, element (div, p) - Selects all &ltdiv&gt elements and all &ltp&gt elements.</li>
+                </ul>
+            </p>
+        </article>
+
+        <article>
+            <h3>CSS Background Image</h3>
+            <p>
+                <ul>
+                    <li>background - sets all the background properties in one declaration (is called shorthand: {background: #ffffff url('img.png') no-repeat right top;})</li>
+                    <li>background-image - sets the background image for an element. {background-image: url('img.png');}</li>
+                    <li>background-size - specifies the size of the background images. {background-size: cover}</li>
+                    <li>background-position - specifies the position for the background. {background-position: center or right top;}</li>
+                    <li>background-repeat - sets how a background image will be repeated. {background-repeat: none, repeat-x or repeat-y;}</li>
+                    <li>background-attachment - sets whether a background image is fixed or scrolls with the rest of the page. {background-attachment: fixed or scroll;} </li>
+                </ul>
+            </p>
+        </article>
+
+        <article>
+            <h3>CSS Box model</h3>
+            <p>
+                Box model is used in CSS when we talking about design and layout. <br>
+                <ul>
+                    <li>CONTENT - the content of the box, where text and images appear. </li>
+                    <li>PADDING - clears an area around the content. Shorthand property: {padding: top right bottom left} or {padding:top and bottom left and right}</li>
+                    <li>BORDER - a border that goes around the padding and content. </li>
+                    <li>
+                        MARGIN - clears an area outside the border. Shorthand property: same as padding. <br> 
+                        The margin:<strong>auto</strong> value will center the element in its container. the margin:<strong>inherit</strong> value takes the margins from the parent element. <br>
+                        Margin collapse: Only top and bottom margins of elements are sometimes collapsed into a single margin that is equal to the largest of the two margins.
+                    </li> 
+                </ul>
+                <div>
+                    <div class="box-model"> <p>This text is the content of the box. We have added a 50px padding, 20px margin and a 15px green border.</p>  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio quaerat suscipit vero iusto! Earum quaerat at tempora cumque. Quisquam quibusdam repellendus maiores consequatur minus cupiditate pariatur incidunt, ducimus id at!.</div>
+                </div>
+            </p>
+        </article>
+
+        <article>
+            <h3>CSS width and height</h3>
+            <p>
+                The CSS <strong>width</strong> and <strong>height</strong> properties are used to set the height and width of an element. <br>
+                The CSS <strong>min-width</strong>, <strong>min-height</strong>, <strong>max-width</strong>, <strong>max-height</strong> are used to set min and max sizes of an element. <br>
+                Properties width and height may have the following values: <strong>auto</strong>, <strong>length0 (px, cm, em, rem)</strong>, <strong>%</strong>, <strong>initial</strong>, <strong>inherit</strong>.
+                <div style="width:50%; height:50px; background:lightblue; border:1px solid black; margin-bottom: 1.5rem; padding: 1rem;">This div element has a height of 50px and a width of 50%.</div>
+                <div style="width:500px; height:50px; background:lightblue; border:1px solid black; margin-bottom: 1.5rem; padding: 1rem;">This div element has a height of 50px and a width of 500px.</div>
+                <div style="max-width:500px; height:50px; background:lightblue; border:1px solid black; margin-bottom: 1.5rem; padding: 1rem;">This div element has a height of 50px and a max-width of 500px.</div>
+
+
+            </p>
+        </article>
+
+        <article>
+            <h3>CSS Outline</h3>
+            <p>
+                An <strong> outline</strong> is a line drawn outside the element's border. Unlike border, the outline is drawn outside the element's border, and may overlap other content. Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline.
+                <ul>
+                    <li><strong>outline</strong> - A shorthand property for setting outline-width, outline-style, and outline-color in one declaration.</li>
+                    <li><strong>outline-color</strong> - Sets the color of an outline.</li>
+                    <li><strong>outline-offset </strong> - Specifies the space between an outline and the edge or border of an element.</li>
+                    <li><strong>outline-style </strong> - Sets the style of an outline.</li>
+                    <li><strong>outline-width </strong> - Sets the width of an outline.</li>
+                </ul>
+                <div class="outline"> This element has a black border and a green outline with a width of 10px and an offset of 5px.</div>
+            </p>
+        </article>
+
+        <article>
+            <h3>CSS Text</h3>
+            <p>
+                <ul>
+                    <li><strong>color</strong> - Specifies the color of text.</li>
+                    <li><strong>text-align</strong> (left, center, right, justify)- Specifies the horizontal alignment of text.</li>
+                    <li><strong>text-align-last</strong> - Specifies how to align the last line of a text.</li>
+                    <li><strong>direction</strong> (rtl, ltr)- Specifies the text direction/writing direction.</li>
+                    <li><strong>unicode-bidi</strong> (bidi-override)- Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document.</li>
+                    <li><strong>vertical-align</strong> - Sets the vertical alignment of an element.</li>
+                    <li><strong>text-decoration</strong> - Sets all the text-decoration properties in one declaration.</li>
+                    <li><strong>text-decoration-color</strong> - Specifies the color of the text-decoration.</li>
+                    <li><strong>text-decoration-line</strong> - Specifies the kind of text decoration to be used (underline, overline, etc.).</li>
+                    <li><strong>text-decoration-style</strong> - Specifies the style of the text decoration (solid, dotted, etc.).</li>
+                    <li><strong>text-decoration-thickness</strong> - Specifies the thickness of the text decoration line.</li>
+                    <li><strong>text-transform</strong> - Controls the capitalization of text.</li>
+                    <li><strong>text-indent</strong> - Specifies the indentation of the first line in a text-block.</li>
+                    <li><strong>letter-spacing</strong> - Specifies the space between characters in a text.</li>
+                    <li><strong>line-height</strong> - Specifies the line height.</li>
+                    <li><strong>word-spacing</strong> - Specifies the space between words in a text.</li>
+                    <li><strong>white-space</strong> - Specifies how to handle white-space inside an element.</li>
+                    <li><strong>text-shadow</strong> -  adds shadow to text specifying horizontal shadow, vertical shadow but also can add blur and color. </li>   
+                </ul>
+
+                <div class="css-text">
+                    <p style="color:darkblue; text-align:center;">This text has color darkblue and is align to the center.</p>
+                    <p>My name has <strong>{direction:rtl}</strong> and <strong>{unicode-bidi:bidi-override}</strong> : <span style="direction:rtl; unicode-bidi: bidi-override;">Radu Padurariu</span> </p>
+                    <p>An <img style="vertical-align: text-top;" class="b" src="../../imgs/favicon.png" width="9" height="9"> image with a vertical-aling: text-top.</p> 
+                    <p class="text-decoration">This text has a <strong>{text-decoration-line:overline; text-decoration-color:red; text-decoration-style:double; text-decoration-thickness:3px;} </strong></p>
+                    <p>The next city name is text-transformed  to lowercase: <span style="text-transform: lowercase;">Drobeta Turnu Severin</span>, uppercase: <span style="text-transform: uppercase;">Drobeta Turnu Severin</span>, capitalize: <span style="text-transform: capitalize">Drobeta Turnu Severin</span> 
+                    <div class="text-identation-spacing">This text is <strong>{text-indent:50px}</strong>, <strong>{letter-spacing:5px}</strong>, <strong>{line-height:1.8}</strong> and <strong>{word-spacing:7px}</strong>. </div>
+                    <div style="white-space: nowrap;">This text has <strong>{white-space:nowrap}</strong> so it will not wrap. Lorem, ipsum dolor sit amet consectetur adipisicing elit. At illo incidunt iure quia, ipsum optio minima sequi eaque accusantium labore. Mollitia repellat qui perspiciatis quaerat recusandae veritatis iste cum reprehenderit. </div>   
+                    <span style="text-shadow:2px 2px;">This text has horizontal shadow 2px, vertical shadow 2px.</span> <span style="text-shadow:2px 2px 5px red">And this one has also blur 5px and color shadow red.</span> 
+                </div>
+            </p>
+        </article>
+
+        <article>
+            <h3>CSS Fonts</h3>
+            <p>
+                Is important to choose the correct color and text size for the font. <br>
+                Those are the most important font families:
+                <ul>
+                    <li><strong>Serif</strong> - fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance. Ex: <span style="font-family:'Times New Roman', serif; font-size: 1.5rem;">Times New Roman</span>, <span style="font-family:Georgia, serif; font-size: 1.5rem;">Georgia</span>, <span style="font-family: garamond, serif; font-size: 1.5rem;">Garamond</span>.</li>
+                    <li><strong>Sans-serif</strong> - fonts have clean lines (no small strokes attached). They create a modern and minimalist look. Ex: <span style="font-family: Arial, Sans-serif; font-size: 1.5rem;">Arial</span >, <span style="font-family: Tahoma, Verdana, sans-serif; font-size: 1.5rem;">Verdana</span>, <span style="font-family: helvetica, sans-serif; font-size: 1.5rem;">Helvetica</span>, <span style="font-family:'Segoe UI', sans-serif; font-size: 1.5rem;">Segoe UI</span>, <span style="font-family: 'Trebuchet MS', sans-serif; font-size: 1.5rem;">Trebuchet MS</span>.</li>
+                    <li><strong>Monospace</strong> - here all the letters have the same fixed width. They create a mechanical look. Ex: <span style="font-family:'Courier New', monospace; font-size: 1.5rem;">Courier New</span>, <span style="font-family:'Lucida console', monospace; font-size: 1.5rem;">Lucida Console</span>, <span style="font-family: monaco, monospace; font-size: 1.5rem;">Monaco</span>.</li>
+                    <li><strong>Cursive</strong> - fonts imitate human handwriting. Ex: <span style="font-family:brush Script MT, cursive; font-size: 1.5rem;">Brush Script MT</span>, <span style="font-family: 'Lucida Handwriting', cursive; font-size: 1.5rem;">Lucida Handwriting</span></li>
+                    <li><strong>Fantasy</strong> - fonts are decorative/playful fonts. Ex: <span style="font-family:copperplate, fantasy; font-size: 1.5rem;">Copperplate</span>, <span style="font-family: Papyrus, fantasy; font-size: 1.5rem;">Papyrus</span></li>
+                </ul>
+                The <strong> font-style </strong>  property is mostly used to specify <span style="font-style: italic;">italic text</span>. <br>
+                The <strong>font-weight</strong> property specifies the <span style="font-weight: bold;">weight of a font (bold)</span>.  <br>
+                The <strong>font-variant</strong> property specifies whether or not a text should <span style="font-variant: small-caps;">be displayed in a small-caps font (small-caps)</span>. <br>
+                The <strong>font-size</strong> property sets the size of the text. A great practice is to set the default font-size in percent for the body element: body {font-size:100%}, h1 {font-size:2.5em}, p {font-size:0.875em}. <br>
+                The text size can be set with a <strong>vw</strong> unit, which means the "viewport width" to follow the size of the browser window. Ex: Resize the browser window to see how this font size scales. 
+
+            </p>
+        </article>
+    </main>
+    <footer>@ Radu Padurariu</footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,151 @@
+body {
+    margin:0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* HTML */
+header {
+    height: 4rem;
+    background-color: lightseagreen;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top:0;
+}
+
+.logo-img {
+    width: 3rem;
+    border-radius: 50%;
+}
+
+.nav-buttons {
+    display:flex;
+    list-style-type:none;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.nav-links {
+    color:white;
+}
+
+.nav-buttons li {
+    padding: 0.5rem 1rem;
+    font-size: 2rem;
+    margin-bottom: 0;
+    
+}
+
+main {
+    padding: 2rem;
+    overflow: auto;
+    margin-top: 4rem;
+}
+
+article {
+    margin-bottom: 2rem;
+}
+
+.fonts {
+    font-size: 1.5rem;
+    color: lightcoral;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+li {
+    margin-bottom: 1rem;
+}
+
+table, .table-example th,  .table-example td {
+    text-align: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+.table-example th {
+    font-size: 1.2rem;
+}
+
+.table-example tr:nth-child(odd) {
+    background-color: rgb(199, 225, 240);
+}
+
+.table-example td:first-child {
+    font-weight: bold;
+}
+
+.table-example th {
+    background-color: rgb(149, 208, 241);
+}
+
+.html-layout tr, .html-layout td{
+    font-weight: bold;
+    background-color: white;
+    border-collapse: none;
+    border: 1px solid black;
+    padding: 0.3rem 1rem;
+}
+
+.html-layout {
+    height: 280px;
+}
+
+footer {
+    text-align: center;
+}
+
+
+/* CSS  */
+.keyboard-symbols {
+    display:flex;
+}
+
+.keyboard-symbols ul {
+    margin-bottom: 4rem;
+}
+
+.box-model {
+    background-color: lightgrey;
+    width: 300px;
+    border: 15px solid green;
+    padding: 50px;
+    margin: 20px;
+}
+
+.outline {
+    border: 2px solid black;
+    outline: 10px solid #4CAF50;
+    outline-offset: 5px;
+    margin: auto;  
+    padding: 20px;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+.css-text {
+    border: 2px solid black;
+    background-color: lightblue;
+    padding: 1rem;
+
+}
+
+.text-decoration {
+    text-decoration: overline red double 3px;
+}
+
+.text-identation-spacing {
+    text-indent: 50px;
+    letter-spacing: 5px;
+    line-height: 1.8;
+    word-spacing: 7px;
+    
+}

@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="W3 Practice Radu Padurariu" />
+    <meta name="keywords" content="w3 practice" />
+    <meta name="author" content="Radu Padurariu" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="./imgs/favicon.png" type="image/x-icon" />
+    <title>W3 Practice HTML Radu Padurariu</title>
+  </head>
+  <body>
+    <header>
+        <a href="/data/websites/w3practice_tutorial/index.html"><img class="logo-img" src="./imgs/radu.png" alt=""></a>
+        
+        <nav>
+            <ul class="nav-buttons">
+                <li><a class="nav-links" href="/data/websites/w3practice_tutorial/index.html">HTML</a> </li>
+                <li><a class="nav-links" href="/data/websites/w3practice_tutorial/html/css/index.html">CSS</a> </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="top">W3 Tutorial practice HTML 2022 - Radu Padurariu</h1>
+        
+        <article>
+            <h3>HTML Intro</h3>
+            <p>
+                <ul>
+                    <li>HTML stands for Hyper Text Markup Language.</li>
+                    <li>HTML is the standard markup language for creating Web pages.</li>
+                    <li>HTML describes the structure of a Web page.</li>
+                    <li>HTML consists of a series of elements.</li>
+                    <li>HTML elements tell the browser how to display the content.</li>
+                </ul>
+            </p>
+        </article>
+        <article>
+            <h3>HTML heading and paragraph</h3>
+            <h5>This is <strong>&lth5&gt </strong>(heading5)</h5>
+            <p>
+                This is a <strong>&ltp&gt</strong>  (paragraph)
+                <br />with <strong>&ltbr&gt </strong> (break) and <strong>&lthr&gt</strong>  (horizontal line)
+                <hr>
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML styles (fonts)</h3>
+            <p>Standard font-size is 16 px or 1 rem. <span class="fonts"> But this text has 1.5rem, with different color and font-family.</span> </p>
+        </article>
+      
+        <article>
+            <h3>HTML Formatting</h3>
+            <p>Those are types of formatting text in HTML <br>
+            This is <b>bold</b>, <strong>strong</strong>, <i>it (italic)</i>, <em>em (emphasized)</em>, <mark>mark</mark>, <small>small</small>, <del>del</del>, <ins>ins</ins>, <sub>sub</sub>, <sup>sup</sup></p>
+        </article>
+
+        <article>
+            <h3>HTML Quotations</h3>
+            <p>Those are types of quotations in HTML <br>
+                <ul>
+                    <li><blockquote cite="https://www.w3schools.com/html/html_quotation_elements.asp">This is <strong>&ltblockquote&gt</strong> tag with <strong>&ltcite&gt</strong> attribute, is used to defines a section that is quote from another source.</blockquote></li>
+                    <li><q><strong>&ltq&gt</strong> tag defines a short quotation</q></li>
+                    <li><strong>&ltabbr&gt</strong> tag stands for abbreviations, in the attribute title we put the whole words, hover the mouse to see <abbr title="Hyper text Markup Language">HTML</abbr></li>
+                    <li>
+                        <p><strong>&ltaddress&gt</strong> tag defines contact information</p>
+                        <p><address>
+                            Practice by Radu Padurariu, <br>
+                            Visit my web page at: <br>
+                            <a href="https://radupadurariu.herokuapp.com" target="_blank"> https://radupadurariu.herokuapp.com</a> <br>
+                            Falticeni, Suceava <br>
+                            Romania
+                        </address></p> 
+                    </li>
+                    <li>
+                        <strong>&ltcite&gt</strong> tag defines the title of a creative work like book, song, movie, etc <br>
+                        <img src="./imgs/golden_eagle.png" width="100px" height="150px" alt="The Golden Eagle">
+                        <p><cite>The Golden Eagle</cite></p>
+                        
+                    </li>
+                    <li>
+                        <strong>&ltbdo&gt</strong> tag (Bi-directional Override) with <strong>dir</strong> attribute (rtl, ltr) is used to change text direction. <br>
+                        The next text is written from right to left: <bdo dir="rtl">"Radu Padurariu"</bdo> <br>
+                        The next text is written from left to right: <bdo dir="ltr">"Radu Padurariu"</bdo>
+                    </li>
+                </ul>  
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML colors</h3>
+            <p>
+                <ul>
+                    <li>
+                        RGB stands for red, green and blue. The values can be from 0 to 255, example: <br>
+                        rgb(255, 0, 0) is <span style="color:red"> red, </span><br>
+                        rgb(0, 255, 0) is <span style="color:green">green</span>, <br>
+                        rgb (0, 0, 255) is <span style="color:blue">blue</span>, <br>
+                        rgb (0, 0, 0) is <span style="color:black">black</span>, <br>
+                        rgb (255, 255, 255) is <span style="color:white; background:darkgrey">white</span>, <br>
+                        rgb (111, 111, 111) is <span style="color:rgb(111, 111, 111)">shade of grey</span>, <br>
+                        rgb (255, 0, 0, 0.5) is <span style="color:rgb(255, 0, 0, 0.5)">red with 0.5 opacity</span>.
+                    </li>
+                 
+                    <li>
+                        HEX stand for hexadecimal color. #rrggbb. The values can be from 0-9 and a to f, example: <br>
+                        #ff0000 is <span style="color:red"> red, </span><br>
+                        #00ff00 is <span style="color:green">green</span>, <br>
+                        #0000ff is <span style="color:blue">blue</span>, <br>
+                        #000000 is <span style="color:black">black</span>, <br>
+                        #ffffff is <span style="color:white; background:darkgrey">white</span>, <br>
+                        #3b3b3b is <span style="color:rgb(111, 111, 111)">shade of grey</span>, <br>
+                        #ff000077 is <span style="color:rgb(255, 0, 0, 0.5)">red with opacity</span>. </li>
+                    </li>
+                    
+                    <li>
+                        HSL stands for Hue, Saturation and Lightness. example: hsl(0, 100%, 25%) is <span style="color:hsl(0, 100%, 25%)">darkred</span>, <br>
+                        Hue is a degree on the color. The values can be from 0 to 360 where <br>
+                        0 is <span style="color:red"> red, </span><br>
+                        120 is <span style="color:green">green</span>, <br>
+                        240 is <span style="color:blue">blue</span>, <br>
+                        Saturation is a percentage value. <br>
+                        0% is <span style="color:rgb(111, 111, 111)">a shade of grey</span>, <br>
+                        100% is <span style="color:hsl(39, 100%, 50%)">full color</span>, <br>
+                        Lightness show the percentage of light where: <br>
+                        0% is <span style="color:hsl(0, 100%, 0%)">black</span>, <br>
+                        100% is <span style="color:hsl(0, 100%, 100%); background:darkgrey">white</span>, <br>
+                    </li>
+                </ul>
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Links</h3>
+            <p>
+                <strong>&lta&gt</strong> tag with attribute <strong>href</strong> defines a hyperlink. <br>
+                Link to <a href="https://google.com" target="_blank" title="Google.com">Google</a> <br>
+                The attribute <strong>target</strong> with value <strong>_blank</strong> open the link in another window or tab <br>
+                Absolute links are urls (web addresses) and Relative links are links in current website <br>
+                We can use images to access links: Link to: <a href="https://google.com" target="_blank"  title="Google.com"><img src="./imgs/google.png" width="100px" alt="Google image"></a> <br>
+                To use a button as a link we have to add some Java script code like <strong>onclick</strong>="document.location='https://google.com'" <button onclick="document.location='https://google.com'">Link to Google</button><br>
+                To send emails we use on href attribute <strong>mailto:someone@example.com</strong> <button onclick="document.location='mailto:someone@example.com'">Send Email</button> <br>
+                A bookmark is an internal link in the same page. On href we add <strong>#id_name</strong> and this will focus the page on the element with same id. <a href="#top">Go to <strong> top of page</strong></a> <br>
+                CSS property <strong>"text-decoration: none"</strong>  removes the default underline from links. 
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Images</h3>
+            <p>
+                <strong>&ltimg&gt</strong> tag is used to insert images <br>
+                In attribute <strong>src</strong> we add the source of image, on <strong>alt</strong> attribute we add a message in case image is missing. Example: <img src="url" width="50px" alt="Image is missing"> <br>
+                Is recommended to add width and height attributes to prevent web page flickering while images are loading. <br>
+                To access an internal image we use on src="./imgs/logo.png", if the image is two folders above we use src="../../imgs/logo.png" <br>
+                <ul>
+                    <li>
+                        <strong> Map</strong> <br>
+                        With <strong>&ltmap&gt</strong> tag and attribute <strong>usemap="map_name"</strong> on image we can access links on different zones from the image. Example: Click on each Social Network. <br>
+                        <img src="./imgs/socials.png" alt="social image missing" usemap="#socialmap" width="200px"> <img src="./imgs/socialsMarked.png" style="margin-left: 5rem;" alt="social image missing" width="200px"><br>
+                        Inside map tag specify clickable areas with <strong>&ltarea</strong> tag and attributes <strong>shape</strong>="rect, circle or poly", coords="(for rect) left, top, left, top, (for circle) left, top, radius, (for poly) left, top, left, top, etc", alt="" and href="". 
+                        <map name="socialmap">
+                            <area shape="rect" coords="50, 0, 100, 60" href="https://facebook.com" target="_blank" alt="facebook link missing">
+                            <area shape="circle" coords="150, 60, 40" href="https://twitter.com" alt="twitter link missing" target="_blank">
+                            <area shape="poly" coords="0, 90, 80, 100, 80, 160, 0, 160" href="https://instagram.com" alt="instagram link missing" target="_blank">
+                            <area shape="poly" coords="100, 120, 170, 120, 170, 190, 100, 190" href="https://youtube.com" alt="youtube link missing" target="_blank">
+                        </map>
+                    </li>
+                    
+                    <li>
+                        <strong>Background Image</strong> <br>
+                        To add a backround image we use style="<strong>background-image</strong>: url('./img.jpg'); <br>
+                        The css property <strong>background-repeat</strong>: no-repeat prevent us to repeat the background image inside the element. <br>
+                        To cover the entire element we use <strong>background-size</strong>: cover and <strong>background-attachment</strong>: fixed. <br>
+                        If we want to stretch the image we use  <strong>background-size</strong>: 100%. <br>
+                        If we cover the image and we want to see it in the center we use <strong>background-position</strong>: center.
+                    </li>
+                    
+                    <li>
+                        <strong>Picture</strong> <br>
+                        With <strong>&ltpicture&gt</strong> tag we can display different images according to the size of screen. <br>
+                        Inside picture we use <strong>source</strong> tag with attributes <strong>media</strong> for min-width and <strong>srcset</strong> for source of image. <br>
+                        Image tag must be the last child in picture in case some browser don't support picture element. <strong>Adjust size of the screen to see effect.</strong><br>
+                        <picture>
+                            <source media="(min-width: 800px)" srcset="./imgs/castle.png">
+                            <source media="(min-width: 465px)" srcset="./imgs/castle1.png">
+                            <img width="100%" src="./imgs/castle2.png" alt="castle image missing">
+                        </picture>
+                    </li>
+
+                    <li>
+                        <strong>Favicon</strong> <br>
+                        A <strong>favicon</strong> is a simple image that will be displayed on the browser tab. Must be inserted in head tag. Example: link rel="icon" href="/imgs/favicon.ico".
+                    </li>
+                </ul>
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Tables</h3>
+            <p>
+                Those are table tags: <strong>&lttable&gt</strong>, <strong>&ltth&gt</strong> (table headers), <strong>&lttr&gt</strong> (table row), <strong>&lttd&gt </strong>(table data), <strong>&ltcaption&gt</strong>, <strong>&ltcolgroup&gt</strong>, <strong>&ltcol&gt</strong>. <br>
+                We can add a table border but if we want one line we need to use <strong>border-collapse</strong>: collapse. <br>
+                With <strong>colspan</strong> and <strong>rowspan</strong> attributes we can span multiple columns and rows. <br>
+                With <strong>colgroup</strong> we can style multiple columns. Inside colgroup we insert <strong>col</strong> tag with attribute <strong>span</strong>="number of columns" to specify how many columns we style.<br>
+                We can style zebra stripes by using tr:nth-child(even or odd) in CSS. <br>
+                Using <strong>caption</strong> tag we can add a table description on the top of the table.
+                <p>
+                    This is the list of border styles: 
+                    dotted <span  style="border-style: dotted; ">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                    dashed <span  style="border-style: dashed; ">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                    solid <span  style="border-style: solid; ">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                    double <span  style="border-style: double; ">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                    groove <span  style="border-style: groove; ">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                    ridge <span  style="border-style: ridge">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                    inset <span  style="border-style: inset; ">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                    outset <span  style="border-style: outset; ">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                    none <span  style="border-style: none; ">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                    hidden <span  style="border-style: hidden; ">&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                </p>
+                
+                <table class="table-example" style="margin-top:3rem">
+                    <caption>My Frontend Progress</caption>
+                    <colgroup>
+                        <col span="1" style="background-color:rgb(199, 225, 240); ">
+                    </colgroup>
+                    <tr>
+                        <th></th>
+                        <th>HTML</th>
+                        <th>CSS</th>
+                        <th>JAVA SCRIPT</th>
+                        <th>GIT</th>
+                        <th>REACT</th>
+                        <th>MERN</th>
+                    </tr>
+                    <tr>
+                        <td>Course</td>
+                        <td colspan="2">Intro IT course</td>
+                        <td colspan="2">Web Dev course</td>
+                       
+                        <td colspan="2">React course</td>
+                      
+                    </tr>
+
+                    <tr>
+                        <td>Knowledge</td>
+                        <td>90%</td>
+                        <td>80%</td>
+                        <td>60%</td>
+                        <td>40%</td>
+                        <td>40%</td>
+                        <td>25%</td>
+                    </tr>
+
+                    <tr>
+                        <td>Hours</td>
+                        <td>150</td>
+                        <td>120</td>
+                        <td>200</td>
+                        <td>30</td>
+                        <td>60</td>
+                        <td>30</td>
+                    </tr>
+
+                    <tr>
+                        <td>Type</td>
+                        <td colspan="2">MarkUp Language</td>
+                        <td>Language</td>
+                        <td>Version system</td>
+                        <td>Library</td>
+                        <td>Backend</td>
+                    </tr>
+
+                    <tr >
+                        <td style="padding:20px"></td>
+                        <td style="padding:20px"><img src="./imgs/logos/html.png" alt="missing-img" width="50px"></td>
+                        <td style="padding:20px"><img src="./imgs/logos/css.png" alt="missing-img" width="50px"></td>
+                        <td style="padding:20px"><img src="./imgs/logos/js.png" alt="missing-img" width="50px"></td>
+                        <td style="padding:20px"><img src="./imgs/logos/git.png" alt="missing-img" width="50px"></td>
+                        <td style="padding:20px"><img src="./imgs/logos/react.png" alt="missing-img" width="50px"></td>
+                        <td style="padding:20px"><img src="./imgs/logos/nodejs.png" alt="missing-img" width="50px"></td>
+                    </tr>
+                </table>
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Lists</h3>
+            <p>
+                There are three types of lists. <strong>&ltul&gt</strong> (unordered lists), <strong>&ltol&gt</strong> (ordered lists) and <strong>&ltdl&gt</strong> (description lists). <br>
+                On <strong>&ltul&gt</strong> with CSS property <strong>"list-style-type</strong> :disc or circle or square or none"we can select the type of style we want. <br>
+                <ul>
+                    <li style="list-style-type: disc;"></li>
+                    <li style="list-style-type: circle;"></li>
+                    <li style="list-style-type: square;"></li>
+                    <li style="list-style-type: none;"></li>
+                </ul>
+                On <strong>&ltol&gt</strong> with attribute <strong>type</strong>="1 or A or a or I or i" we can select what type of style we want for ol. I and i are roman numbers. <br>
+                <ul>
+                    <li type="1"></li>
+                    <li type="A"></li>
+                    <li type="a"></li>
+                    <li type="I"></li>
+                    <li type="i"></li>
+                </ul>
+                On <strong>&ltdl&gt</strong> is used with tags <strong>&ltdt&gt</strong> (data term) and <strong>&ltdd&gt</strong> (data of each term) to create a complete description list.
+                <dl>
+                    <dt>HTML, CSS</dt>
+                    <dd>MarkUp languages</dd>
+                    <dt>React, Angular, Vue</dt>
+                    <dd>Java Script frameworks</dd>
+                </dl>
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Block & Inline</h3>
+            <p>
+                HTML elements can be displayed in two types: Block and Inline. <br>
+                A block element always starts with a new line, Inline elements don't start with a new line. <br>
+                <p>This is the list of <strong>block</strong>  elements in HTML:</p>   
+
+                <strong>div</strong> <br>
+                <strong>h1 - h6</strong>, <strong>p</strong>, <strong>hr</strong><br>
+                <strong>header</strong>, <strong>nav</strong>, <strong>section</strong>, <strong>article</strong>, <strong>aside</strong>, <strong>footer</strong>
+                <br>
+                <strong>ul</strong>, <strong>ol</strong>, <strong>li</strong>, <strong>dl</strong>, <strong>dt</strong>, <strong>dd</strong>
+                <br>
+                <strong>pre</strong>, <strong>blockquote</strong>, <strong>address</strong> <br>
+                <strong>table</strong>, <strong>tfoot</strong>  <br>
+                <strong>form</strong>, <strong>fieldset</strong>  <br>
+                <strong>figcaption</strong>, <strong>figure</strong> <br>
+                <strong>canvas</strong>, <strong>video</strong> <br>
+                <strong>noscript</strong>. 
+
+                <p>This is the list of <strong>inline</strong> elements in HTML: </p>
+                <strong>span</strong>, <strong>br</strong>,<br>   
+                <strong>a</strong>, <strong>img</strong>, <strong>map</strong>, <strong>object</strong> <br>
+                <strong>q</strong>, <strong>abbr</strong>, <strong>cite</strong>, <strong>bdo</strong>, <strong>dfn</strong>, <strong>samp</strong>, <strong>kdb</strong> <br>         
+                <strong>b</strong>, <strong>strong</strong>, <strong>i</strong>,  <strong>em</strong>,  <strong>small</strong>, <strong>mark</strong>, <strong>del</strong>, <strong>ins</strong>, <strong>sub</strong>, <strong>sup</strong><br>
+                <strong>input</strong>, <strong>label</strong>, <strong>button</strong>,  <strong>select</strong>, <strong>textarea</strong>, <strong>output</strong> <br>
+                <strong>code</strong>, <strong>var</strong>, <strong>time</strong> <br>
+                <strong>acronym</strong>, <strong>big</strong>, <strong>tt</strong> (those are not supported in HTML 5 anymore) <br>
+                <strong>script</strong>.
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Iframes</h3>
+            <p>
+                An <strong>&ltiframe&gt</strong> tag is used to display a web page within a web page. <br>
+                The attribute for <strong>&ltiframe&gt</strong> are <strong>src</strong> for url, <strong>title</strong> with a description and <strong>width</strong> and <strong>height</strong> for size. <br>
+            </p> 
+            <p>
+                <iframe src="https://blogulcolectionarului.net" frameborder="0" title="Radu Padurariu Portofolio"></iframe>
+            </p>    
+        </article>
+
+        <article>
+            <h3>HTML Head</h3>
+            <p>
+                The <strong>&lthead&gt</strong> element is the a container for metadata (configurations). <br>
+                The elements that appear in <strong>head</strong> are <strong>title</strong>, <strong>style</strong>, <strong>meta</strong>, <strong>link</strong>, <strong>script</strong> and <strong>base</strong>. <br>
+                <strong>Meta</strong> attributes are <strong>charset</strong>="UTF-8" and <strong>name</strong>="keywords or description or author or viewport" with <strong>content</strong>. <br>
+                The <strong>&ltscript&gt</strong> element with his <strong>src</strong> attribute can be both in <strong>head</strong> and <strong>body</strong>. <br>
+                The <strong>&ltbase&gt</strong> element specifies the base URL and/or target for all relative URLs in a page.
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Layout</h3>
+            <p>
+                HTML has several semantic elements that define the different parts of a web page. <br>
+                <div style="display:flex">
+                    <table class="html-layout">
+                        <tr>
+                            <td colspan="2">header</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">nav</td>
+                        </tr>
+                        <tr>
+                            <td>section</td>
+                            <td rowspan="2">aside</td>
+                        </tr>
+                        <tr>
+                            <td>article</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">footer</td>
+                        </tr>
+                    </table>
+                    <p>
+                        <ul >
+                            <li><strong>&ltheader&gt</strong> - Defines a header for a document or a section.</li> 
+                            <li><strong>&ltnav&gt</strong> - Defines a set of navigation links.</li> 
+                            <li><strong>&ltsection&gt</strong> - Defines a section in a document. </li> 
+                            <li><strong>&ltaticle&gt</strong>  - Defines an independent, self-contained article.</li>
+                            <li><strong>&ltaside&gt</strong> - Defines content aside from the content (like a sidebar).</li> 
+                            <li><strong>&ltfooter&gt</strong> - Defines a footer for a document or a section.</li> 
+                            <li><strong>&ltdetails&gt</strong>  - Defines additional details that the user can open and close on demand.</li>
+                            <li><strong>&ltsummary&gt</strong> - Defines a heading for the <strong>details</strong> element.</li> 
+                           
+                        </ul>
+                    
+                    </p>
+                </div>
+                <p>
+                    There are four different techniques to create multicolumn layouts: <strong>CSS framework</strong>, <strong>CSS float property</strong>, <strong>CSS flexbox</strong>, <strong>CSS grid</strong>. <br>
+                    We can create fast layouts by using CSS frameworks like <strong><a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS</a></strong> or <strong><a href="https://www.w3schools.com/bootstrap/default.asp" target="_blank">Bootstrap</a></strong>. <br>
+                    The <strong>float</strong> CSS property (left, right, none) specifies how an element should float. Is used for images to position around the text. <br>
+                    The most common used in this days is <strong>flexbox</strong> (more in CSS tutorial).<br>
+                    The <strong>CSS grid</strong> layout offer a grid-based layout system.
+
+                </p>
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Computer code</h3>
+            <p>
+                The <strong>&ltcode&gt</strong> element is used to insert computer code in HTML. Example: 
+                
+                <code>
+                    x = 5;
+                    y = 6;
+                    z = x + y;
+                </code> <br>
+            
+                The <strong>&ltkdb&gt</strong> element is used to define keyboard input. Example: <span>Save the document by pressing <kbd>Ctrl + S</kbd></span> <br>
+                The <strong>&ltsamp&gt</strong> element is used to define sample output from a computer program. Example:  <br> <samp>File not found.<br>Press F1 to continue</samp><br>
+                The <strong>&ltvar&gt</strong> element is used to define a variable in a programming or in a mathematical expression. Example: <br>
+                The area of a triangle is: 1/2 x <var>b</var> x <var>h</var>, where <var>b</var> is the base, and <var>h</var> is the vertical height.
+                
+                
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Semantics</h3>
+            <p>
+                A semantic element clearly describes its meaning to both the browser and developer. <br>
+                This is a list of semantic elements: <strong>article</strong>, <strong>aside</strong>, <strong>details</strong>, <strong>figcaption</strong>, <strong>figure</strong>, <strong>footer</strong>, <strong>header</strong>, <strong>main</strong>, <strong>mark</strong>, <strong>nav</strong>, <strong>section</strong>, <strong>summary</strong>, <strong>time</strong>. <br>
+                The <strong>&ltfigure&gt</strong> tag is used to specify content like illustration, diagrams, code listing, etc. <br>
+                Inside <strong>&ltfigure&gt</strong> we use two tags, <strong>&ltimg&gt</strong>, and <strong>figcaption</strong>. <br>
+                The <strong>&ltfigcaption&gt</strong> tag defines a caption of a figure. <br>
+                <figure>
+                    <img width="400px" src="./imgs/rarau.png" alt="Rarau image missing">
+                    <figcaption>Fig1. - Pietrele Doamnei, M-tii Rarau, Romania.</figcaption>
+                </figure>
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Charset, Symbols, Emojis, etc</h3>
+            <p>
+                HTML <strong>entities</strong> replace reserved characters in html. Ex: &lt is & lt, &gt is & gt, space is & nbsp, etc. <br>
+                Some symbols which are not on the keyboard can also be displayed with entities. Ex: euro(&#8364) is & #8364. <br>
+                Emojis are characters from UTF-8 character set: 😄 😍 💗.
+                ASCII was the first character encoding standard. It defines 128 different characters: numbers(0-9), English letters (A-Z) and other special symbols. <br>
+                <strong>UTF-8</strong> is identical to ASCII for the values from 0 to 127, does not use values from 128 to 159, is identical to ANSI and 8859-1 for values between 160-255. UTF-8 continues from value 256 with more than 10.000 different characters. 
+            </p>
+        </article>
+
+        <article>
+            <h3>xHTML vs HTML</h3>
+            <p>
+                <strong>XHTML</strong> is a stricter, more XML-based version of HTML. XML is a markup language where all documents must be marked up correctly.<br>
+                The most important differences from HTML are:
+                <ul>
+                    <li>&lt!DOCTYPE&gt is <strong>mandatory</strong></li>
+                    <li>The xmlns attribute in &lthtml&gt is <strong>mandatory</strong></li>
+                    <li>&lthtml&gt, &lthead&gt, &lttitle&gt and &ltbody&gt are <strong>mandatory</strong></li>
+                    <li>Elements must always be <strong>properly nested</strong></li>
+                    <li>Elements must always be <strong>closed</strong></li>
+                    <li>Elements must always be in <strong>lowercase</strong></li>
+                    <li>Attribute name must always be in <strong>lowercase</strong></li>
+                    <li>Attribute values must always be <strong>quoted</strong></li>
+                    <li>Attribute minimization is <strong>forbidden</strong></li>
+                </ul>
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Style guide</h3>
+            <p>
+                A consistent, clean, and tidy HTML code makes it easier for others to read and understand your code. Those are the major guides:<br>
+                <ul>
+                    <li>Always declare document type: &ltDOCTYPE html&gt</li>
+                    <li>Use lowercase elements and attributes names: &ltdiv style="" &gt &lt/div&gt</li>
+                    <li>Close all HTML elements: &ltp&gt &lt/p&gt, &ltimg /&gt</li>
+                    <li>Always quote attribute values: &lttable class="striped"&gt</li>
+                    <li>Always specify alt, width and height for images. </li>
+                    <li>Don't use space after equal: This is bad: &ltlink rel = "stylesheet"&gt  </li>
+                    <li>Avoid long code lines. </li>
+                    <li>Do not add blank lines, spaces, or indentations without a reason.</li>
+                    <li>Add the <strong>lang</strong> attribute: &lthtml lang="en-us"&gt</li>
+                    <li>Use comments in your code.</li>
+                    <li>Use lowercase file names.</li>
+                    <li>Use correct CSS rules: <br> <img src="./imgs/css-example.png" alt="missing css example"></li>
+                </ul>
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Graphics and Media</h3>
+            <p>
+                The <strong>&ltcanvas&gt</strong> element is use to draw graphics via Java Script. Don't forget to set <strong>width</strong> and <strong>height</strong> for it. <br>
+                The <strong>&ltsvg&gt</strong> element is a container for SVG graphics (Scalable Vector Graphics). Is the most common used.<br>
+                <svg width="100" height="100">
+                    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+                </svg>
+                <svg width="400" height="100">
+                    <rect width="400" height="100" style="fill:rgb(0,0,255);stroke-width:10;stroke:rgb(0,0,0)" />
+                </svg>
+
+                <svg width="400" height="180">
+                    <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+                    style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+                </svg>
+                <svg width="300" height="200">
+                    <polygon points="100,10 40,198 190,78 10,78 160,198"
+                    style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+                </svg>
+                <svg height="130" width="500">
+                    <defs>
+                      <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+                      </linearGradient>
+                    </defs>
+                    <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+                    <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+                    Sorry, your browser does not support inline SVG.
+                </svg>
+                <p>
+                    Multimedia on the web is sound, music, videos, movies, and animations. Multimedia comes in many different formats. <br>
+                The <strong>&ltvideo&gt</strong> element is used to insert videos in the website. It has attributes like <strong>width</strong>, <strong>height</strong>, <strong>controls</strong> (default browser controls), <strong>muted</strong> and <strong>autoplay</strong>. <br>
+                His <strong>&ltsource&gt</strong> tag with attributes <strong>src</strong> and <strong>type</strong> or <strong>video</strong>'s attribute <strong>src</strong> are used to define the source of the video. <br>
+                <video controls src="./media/css.mp4"></video>
+                <p>
+                    The HTML <strong>&ltaudio&gt</strong> element is used to play an audio file on a web page. Has same attributes and inside tags like <strong>video</strong>: <strong>controls</strong>, <strong>muted</strong>, <strong>autoplay</strong>, <strong>source</strong>, <strong>type</strong>. <br>
+                    <audio controls>
+                        <source src="./media/clap.mp3" type="audio/mp3">
+                    </audio>
+                </p>
+                
+
+                </p>
+                
+
+            </p>
+        </article>
+
+        <article>
+            <h3>HTML Forms</h3>
+            <p>
+                An HTML <strong>&ltform&gt</strong> element is a container for different types of input elements and is used to collect data from the user. <br>
+                An <strong>&ltinput&gt</strong> element can be displayed in many ways, depending on the type attribute. 
+
+                <h4>Form attributes</h4>
+                <ul>
+                    <li><strong>name</strong> - Specifies the name of the form.</li>
+                    <li><strong>action </strong> - Specifies where to send the form-data when a form is submitted.</li>
+                    <li><strong>method</strong> - Specifies the HTTP method to use when sending form-data.</li>
+                    <li><strong>autocomplete </strong> - Specifies whether a form should have autocomplete on or off.</li>
+                    <li><strong>enctype</strong> - Specifies how the form-data should be encoded when submitting it to the server (only for method="post").</li>
+                    <li><strong>novalidate</strong> - Specifies that the form should not be validated when submitted.</li>
+                    <li><strong>rel</strong> - Specifies the relationship between a linked resource and the current document.</li>
+                    <li><strong>target</strong> - Specifies where to display the response that is received after submitting the form.</li>              
+                    <li><strong>accept-charset </strong> - Specifies the character encodings used for form submission.</li>
+                </ul>
+                <p>
+                </p>
+                <h4>Form elements</h4>
+                <ul>
+                    <li><strong>&ltform&gt</strong> - Defines an HTML form for user input.</li>
+                    <li><strong>&ltinput&gt</strong> - Defines an input control.</li>
+                    <li><strong>&lttextarea&gt</strong> - Defines a multiline input control (text area).</li>
+                    <li><strong>&ltlabel&gt</strong> - Defines a label for an input element.</li>
+                    <li><strong>&ltfieldset&gt</strong> - Groups related elements in a form.</li>
+                    <li><strong>&ltlegend&gt</strong> - Defines a caption for a fieldset element.</li>
+                    <li><strong>&ltselect&gt</strong> - Defines a drop-down list.</li>
+                    <li><strong>&ltoptgroup&gt</strong> - Defines a group of related options in a drop-down list.</li>
+                    <li><strong>&ltoption&gt</strong> - Defines an option in a drop-down list.</li>
+                    <li><strong>&ltbutton&gt</strong> - Defines a clickable button.</li>
+                    <li><strong>&ltdatalist&gt</strong> - Specifies a list of pre-defined options for input controls.</li>
+                    <li><strong>&ltoutput&gt</strong> - Defines the result of a calculation.</li>
+                </ul>
+                <p>
+                    Examples of attributes for form elements: <br>
+                    <ul>
+                        <li><strong>&ltlabel&gt</strong> with <strong>for</strong> - for should be equal to <strong>id</strong> attribute of the input. Ex: &ltlabel for="fname"&gtFirst name:&lt/label&gt</li>
+                        <li><strong>&ltselect&gt</strong> with <strong>size</strong> - size specify the number of visible values.</li>
+                        <li><strong>&ltselect&gt</strong> with <strong>multiple</strong> - multiple attribute allow the user to select more than one value with <kbd>CTRL key</kbd>.</li>
+                        <li><strong>&lttextarea&gt</strong> with <strong>rows</strong> and <strong>cols</strong> - rows specify the visible numbers of lines in a text area and cols specify the visible width of a text area.</li>
+                        <li><strong>&ltinput&gt</strong> with <strong>list</strong> and <strong>&ltdatalist&gt</strong> with <strong>id</strong> - The list attribute of input must refer to the id attribute of datalist element.</li>
+                        <li><strong>&ltoutput&gt</strong> with <strong>name</strong> and <strong>for</strong> - name must be equal with name.value from form attribute called oninput, for must contain the id values of inputs.</li>
+
+                    </ul>
+                </p>
+                <h4>Input types</h4>
+                <ul>
+                    <li><strong>&ltinput type="text"&gt</strong> - defines a single-line text input field.</li>
+                    <li><strong>&ltinput type="password"&gt</strong> - defines a password field.</li> 
+                    <li><strong>&ltinput type="submit"&gt</strong> - defines a button for submitting form data to a form-handler. The form-handler is specified in the form's action attribute.</li> 
+                    <li><strong>&ltinput type="reset"&gt</strong> - defines a reset button that will reset all form values to their default values.</li> 
+                    <li><strong>&ltinput type="radio"&gt</strong> - defines a radio button (select only one).</li> 
+                    <li><strong>&ltinput type="checkbox"&gt</strong> - define a checkbox (multiple selections).</li>
+                    <li><strong>&ltinput type="button"&gt</strong> - defines a button. onclick attribute is used to acces the JS function.</li>         
+                    <li><strong>&ltinput type="color"&gt</strong> - is used for input fields that should contain a color.</li> 
+                    <li><strong>&ltinput type="date"&gt</strong> - is used for input fields that should contain a date. With attributes min and max we can add restrictions to dates.</li> 
+                    <li><strong>&ltinput type="datetime-local"&gt</strong> - specifies a date and time input field, with no time zone. </li> 
+                    <li><strong>&ltinput type="email"&gt</strong> - is used for inputs that should contain an e-mail address.</li> 
+                    <li><strong>&ltinput type="image"&gt</strong> - defines an image as a submit button.</li> 
+                    <li><strong>&ltinput type="file"&gt</strong> - defines a file-select field and a "Browse" button for file uploads. </li> 
+                    <li><strong>&ltinput type="hidden"&gt</strong> - defines a hidden input field (not visible to user). </li> 
+                    <li><strong>&ltinput type="month"&gt</strong> - allows the user to select a month and year.</li> 
+                    <li><strong>&ltinput type="number"&gt</strong> - defines a numeric input field. Can use min and max attributes to add restrictions.</li> 
+                    <li><strong>&ltinput type="range"&gt</strong> - defines a control for entering a number whose exact value is not important. Can use min and max to add restrictions. </li> 
+                    <li><strong>&ltinput type="search"&gt</strong> - is used for search fields.</li> 
+                    <li><strong>&ltinput type="tel"&gt</strong> - is used for inputs fields that should contain a telephone number. Can use patter attribute to set the desire configuration of the number. </li>
+                    <li><strong>&ltinput type="time"&gt</strong> - allows the user to select a time (no time zone).</li> 
+                    <li><strong>&ltinput type="url"&gt</strong> - is used for inputs fields that should contain a URL address. </li>
+                    <li><strong>&ltinput type="week"&gt</strong> - allows the user to select a week and year.</li>   
+                </ul>
+
+                <h4>Input Restrictions</h4>
+                <ul>
+                    <li><strong>value</strong> - Specifies the default value for an input field.</li>
+                    <li><strong>checked</strong> - Specifies that an input field should be pre-selected when the page loads (for type="checkbox" or type="radio").</li>
+                    <li><strong>disabled</strong> - Specifies that an input field should be disabled.</li>
+                    <li><strong>required</strong> - Specifies that an input field is required (must be filled out).</li>
+                    <li><strong>min</strong> - Specifies the minimum value for an input field.</li>
+                    <li><strong>max</strong> - Specifies the maximum value for an input field.</li>
+                    <li><strong>maxlength</strong> - Specifies the maximum number of character for an input field.</li>
+                    <li><strong>size</strong> - Specifies the width (in characters) of an input field.</li>
+                    <li><strong>pattern</strong> - Specifies a regular expression to check the input value against.</li>
+                    <li><strong>readonly</strong> - Specifies that an input field is read only (cannot be changed).</li>
+                    <li><strong>step</strong> - Specifies the legal number intervals for an input field.</li> 
+                </ul>
+
+                <h4>Input attributes</h4>
+                <ul>
+                    <li><strong>multiple</strong> - specifies that theuser is allowed to enter more than one value in an input field.</li>
+                    <li><strong>placeholder</strong> - specifies a short hint that describes the expected value of an input field. </li>
+                    <li><strong>autofocus</strong> - specifies that an input field should automatically get focus when page loads.</li>
+                    <li><strong>width</strong> and <strong>height</strong> - specify the size of an input field. </li>
+                    <li><strong>list</strong> - reffers to <strong>&ltdatalist&gt</strong> element that contain a pre-defined options for an input element.</li>
+                    <li><strong>autocomplete</strong> - specifies whether a form or an input field should have autocomplete on or off. Works with form and some types of input. </li>
+                    <li><strong>form</strong> - specifies the form the input belongs to.</li>
+                    <li><strong>formaction</strong> - specifies the URL of the file that will process the input when the form is submitted.</li>
+                    <li><strong>formenctype</strong> - specifies how the form-data should be encoded when submitted (only for forms with method="post")</li>
+                    <li><strong>formmethod</strong> - defines HTTP method for sending form-data to the action URL (overrides the form method). Works with input types sumbit and image.</li>
+                    <li><strong>formtarget</strong> - specifies a name or a keyword that indicates where to display the response that is received after submitting the form. (overrides the form target). </li>
+                    <li><strong>formnovalidate</strong> - specifies that in input element should not be validated when submitted. (overrides the form novalidate).  </li>
+                </ul>
+
+                <p>Example of form: </p>
+                <form action="">
+                    <fieldset>
+                        <legend>Register</legend>
+                        <p><label for="first_name">First Name</label> <input type="text" placeholder="First name" width="100px" name="first_name" id="first_name"></p>
+                        <p><label for="last_name">Last Name</label> <input type="text" placeholder="Last Name" id="last_name" name="last_name"></p> 
+                        <p><label for="phone">Phone</label> <input type="tel" placeholder="0751-227-911" id="phone" name="phone" maxlength="10" ></p> 
+                        <p><label for="time">Available time for interview</label> <input type="time" placeholder="" id="10" name="time" ><input type="time" placeholder="07:00 AM" id="11" name="time" ></p> 
+
+                        <p><label for="email">E-mail</label> <input type="email" placeholder="E-mail" id="email" name="email"></p> 
+                        <p><label for="password">Password</label> <input type="password" placeholder="Password" id="password" name="password"></p> 
+                         
+                        <p><label for="birthday">Birthday</label> <input type="date" placeholder="Date" id="birthday" name="birthday"></p>  <br>
+                        Marital Status:
+                        <p>  
+                            <input type="radio" placeholder="" id="single" name="marital" >
+                            <label for="single">Single</label> 
+                        </p> 
+                        <p>
+                            <input type="radio" placeholder="" id="married" name="marital" >
+                            <label for="married">Married</label> 
+                        </p> 
+                        <p>
+                            <input type="radio" placeholder="" id="divorced" name="marital" >
+                            <label for="divorced">Divorced</label> 
+                        </p> 
+                        <p><label for="age">Children</label> <input type="number" placeholder="Childern" id="age" name="age" value="0"></p>
+                        
+                        Knowledge:
+                        <p class="knowledge">
+                            <div><label for="html">HTML</label> <input type="checkbox" name="HTML" id="1" value="HTML"></div>
+                            <div><label for="css">CSS</label> <input type="checkbox" name="HTML" id="2" value="HTML"></div>
+                            <div><label for="courses">Java Script</label> <input type="checkbox" name="3" id="html" value="HTML"></div>
+                            <div><label for="courses">React</label> <input type="checkbox" name="HTML" id="4" value="HTML"></div>
+                            <div><label for="courses">Typescript</label> <input type="checkbox" name="HTML" id="5" value="HTML"></div>  
+                        </p>
+                        <p><label for="linkedin">Linkedin profile</label> <input type="url" name="linkedin" id="linkedin" ></p>
+                        <p><label for="color">Favorite color</label> <input type="color" name="color" id="color" ></p>
+                        <p><label for="profile-pic">Profile picture</label> <input type="file" name="profile-pic" id="profile-pic" ></p>
+                        <p>
+                            <label for="degree">Degree</label>
+                            <select name="degree" id="degree">
+                                <option value="">High School</option>
+                                <option value="">Bachelor</option>
+                                <option value="">University</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="list">Salary range</label>
+                            <input id="list" list="salaries" name="list">
+                            <datalist name="degree" id="salaries" >
+                                <option value="Less than 500 euro"></option>
+                                <option value="500 euro to 700 euro"></option>
+                                <option value="700 euro t0 1000 euro"></option>
+                                <option value="More than 1000 euro"></option>
+                            </datalist>
+                        </p>
+                        <p><label for="textarea">Aditional comments: </label></p>
+                        <p> <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea></p>
+                        <p><input type="submit" placeholder="" id="submit" name="submit" value="Submit"> <input type="reset"></p>
+
+                    </fieldset>
+                    
+                    
+                </form>
+            </p>
+        </article>
+    </main>
+    <footer>@ Radu Padurariu</footer>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
