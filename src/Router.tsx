@@ -23,7 +23,7 @@ import {
   CookingCategoryPage,
   CookingMealPage,
 } from "./templates/Cooking/pages";
-import { CookingSidebarProvider } from "./templates/Cooking/context/CookingSideBarContext";
+import { CookingSidebarProvider } from "./templates/Cooking/context/CookingTempSidebarContext";
 import { CookingMealProvider } from "./templates/Cooking/context/CookingMealContext";
 import axios from "./templates/Cooking/api/axios";
 import {

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import styles from "./CookingHeader.module.scss";
 import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
-import { useCookingSidebarContext } from "../../context/CookingSideBarContext";
+import { useCookingSidebarContext } from "../../context/CookingTempSidebarContext";
 
 const CookingNavbar = () => {
   const { openSidebar, isSidebarOpen } = useCookingSidebarContext();
