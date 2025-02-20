@@ -35,8 +35,9 @@ const WellnessRoutine = () => {
         <h4>Wake Up at 07:00</h4>
 
         <ul className={styles["wellness-routine__container_ul"]}>
-          {wellnessRoutineList.map((routine) => {
+          {wellnessRoutineList.map((routine, index) => {
             const IconComponent = FaIcons[routine.icon as keyof typeof FaIcons];
+
             return (
               <li
                 className={styles["wellness-routine__container_ul_li"]}
@@ -64,6 +65,31 @@ const WellnessRoutine = () => {
                 <div
                   className={styles["wellness-routine__container_ul_li_line"]}
                 ></div>
+
+                <div
+                  className={styles["wellness-routine__container_ul_li_item"]}
+                  style={
+                    {
+                      "--dynamic-left": `${
+                        index % 2 === 0
+                          ? "calc(50% - 200px)"
+                          : "calc(50% + 100px)"
+                      }`,
+                    } as React.CSSProperties
+                  }
+                >
+                  <div>
+                    {
+                      <IconComponent
+                        className={
+                          styles["wellness-routine__container_ul_li_item_icon"]
+                        }
+                      />
+                    }
+                  </div>
+                  <h3>{routine.text}</h3>
+                  <p>{routine.desc}</p>
+                </div>
               </li>
             );
           })}
