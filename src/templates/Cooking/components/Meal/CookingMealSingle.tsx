@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { AiFillHome, AiOutlineCheckSquare } from "react-icons/ai";
 import { BiChevronsRight } from "react-icons/bi";
 import { FaUtensilSpoon } from "react-icons/fa";
-import { useEffect } from "react";
 
 const CookingMealSingle = ({ meal }: { meal: CookingSingleMeal }) => {
   let tags = meal?.tags?.split(",");

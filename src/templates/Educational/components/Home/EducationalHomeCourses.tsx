@@ -1,6 +1,5 @@
 import EducationalHeading from "../common/Heading/EducationalHeading";
 import styles from "./EducationalHome.module.scss";
-import coursingStyles from "../Courses/EducationalCourses.module.scss";
 import EducationalCoursesCard from "../Courses/EducationalCoursesCard";
 import EducationalOnlineCourses from "../Courses/EducationalOnlineCourses";
 

@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import styles from "./FitnessAPIExercises.module.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FitnessExercise } from "../../types/fitnessTypes";
 import FitnessSearchAPI from "../../components/APIComponents/SearchAPI/FitnessSearchAPI";
 import FitnessExercisesList from "../../components/APIComponents/ExercisesList/FitnessExercisesList";

@@ -6,7 +6,6 @@ import CookingNotFound from "../../components/NotFound/CookingNotFound";
 import { useCookingMealContext } from "../../context/CookingMealContext";
 import styles from "./CookingMealDetails.module.scss";
 import { CookingSingleFetchMeal, CookingSingleMeal } from "../../types/types";
-import { useEffect } from "react";
 
 const CookingMealDetailsPage = () => {
   const { categories, categoryLoading, categoryError } =

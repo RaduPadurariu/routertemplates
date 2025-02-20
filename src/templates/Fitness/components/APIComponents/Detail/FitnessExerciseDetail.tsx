@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import styles from "./FitnessExerciseDetail.module.scss";
-import { useParams } from "react-router-dom";
 import { FitnessExerciseDetailProps } from "../../../types/fitnessTypes";
 import { Button, Stack, Typography } from "@mui/material";
 
