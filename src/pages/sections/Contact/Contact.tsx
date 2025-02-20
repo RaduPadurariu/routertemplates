@@ -31,15 +31,19 @@ const Contact: React.FC<ContactProps> = ({ contactRef }) => {
             </div>
             <div className={styles.contact__content__right}>
               {contact.map((item) => (
-                <div key={item.id}>
+                <div
+                  key={item.id}
+                  className={styles.contact__content__right_item}
+                >
                   <FontAwesomeIcon
                     icon={item.icon}
                     className={styles.contact__social__icon}
                   />
                   <p>{item.text1}</p>
-                  <p>{item.text2}</p>
+                  {/* <p>{item.text2}</p> */}
                 </div>
               ))}
+              <a href="https://radupadurariu.netlify.app">Visit Portfolio</a>
             </div>
           </div>
         </div>

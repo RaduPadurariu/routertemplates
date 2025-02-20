@@ -34,6 +34,19 @@
       width: 35%;
       padding: 20px;
 
+      &_item {
+        margin-bottom: 2rem;
+      }
+
+      a {
+        color: #bac8d3;
+        font-size: 15px;
+
+        &:hover {
+          color: $primary-text;
+        }
+      }
+
       .contact__social__icon {
         font-size: 20px;
         padding-top: 10px;
