@@ -44,18 +44,13 @@ export const days = [
         src: "Biceps2.gif",
       },
     ],
-    secondaryWorkout: { en: "Calves", ro: "Gambe" },
+
+    secondaryWorkout: { en: "Back", ro: "Spate" },
     secondaryWorkoutSrc: [
+      { name: { en: "Pull-Up", ro: "Tractiuni spate" }, src: "Spate1.gif" },
       {
-        name: { en: "Donkey Calf Raises", ro: "Ridicări pe vârfuri" },
-        src: "Gambe1.gif",
-      },
-      {
-        name: {
-          en: "Dumbbell Calf Raise",
-          ro: "Ridicari pe varfuri cu gantere",
-        },
-        src: "Gambe2.gif",
+        name: { en: "Bent-over Dumbbell Rows", ro: "Ramat cu gantere" },
+        src: "Spate2.gif",
       },
     ],
   },
@@ -71,6 +66,32 @@ export const days = [
         src: "Piept2.gif",
       },
     ],
+    secondaryWorkout: { en: "Triceps", ro: "Triceps" },
+    secondaryWorkoutSrc: [
+      { name: { en: "Dips", ro: "Flotari la paralele" }, src: "Triceps1.gif" },
+      {
+        name: { en: "Dumbbell Pullover", ro: "Pullover cu gantera" },
+        src: "Triceps2.gif",
+      },
+    ],
+  },
+  {
+    id: 3,
+    day: { en: "WEDNESDAY", ro: "Miercuri" },
+    primaryWorkout: { en: "Forearm", ro: "Antebrat" },
+    primaryWorkoutSrc: [
+      {
+        name: { en: "Close-Grip Pull-Up", ro: "Tractiuni cu priza ingusta" },
+        src: "Antebrat1.gif",
+      },
+      {
+        name: {
+          en: "Seated Dumbbell Wrist Curl",
+          ro: "Flexii de incheietura cu gantere",
+        },
+        src: "Antebrat2.gif",
+      },
+    ],
     secondaryWorkout: { en: "Abs", ro: "Abdomen" },
     secondaryWorkoutSrc: [
       { name: { en: "Crunches", ro: "Abdomene" }, src: "Abdomen1.gif" },
@@ -81,14 +102,17 @@ export const days = [
     ],
   },
   {
-    id: 3,
-    day: { en: "WEDNESDAY", ro: "Miercuri" },
-    primaryWorkout: { en: "Triceps", ro: "Triceps" },
+    id: 4,
+    day: { en: "THURSDAY", ro: "Joi" },
+    primaryWorkout: { en: "Shoulders", ro: "Umeri" },
     primaryWorkoutSrc: [
-      { name: { en: "Dips", ro: "Flotari la paralele" }, src: "Triceps1.gif" },
+      { name: { en: "Pike Push-Ups", ro: "Flotari Pike" }, src: "Umeri1.gif" },
       {
-        name: { en: "Dumbbell Pullover", ro: "Pullover cu gantera" },
-        src: "Triceps2.gif",
+        name: {
+          en: "Seated Dumbbell Press",
+          ro: "Impins deasupra capului cu gantere",
+        },
+        src: "Umeri2.gif",
       },
     ],
     secondaryWorkout: { en: "Traps", ro: "Trapez" },
@@ -104,47 +128,11 @@ export const days = [
     ],
   },
   {
-    id: 4,
-    day: { en: "THURSDAY", ro: "Joi" },
-    primaryWorkout: { en: "Back", ro: "Spate" },
-    primaryWorkoutSrc: [
-      { name: { en: "Pull-Up", ro: "Tractiuni spate" }, src: "Spate1.gif" },
-      {
-        name: { en: "Bent-over Dumbbell Rows", ro: "Ramat cu gantere" },
-        src: "Spate2.gif",
-      },
-    ],
-    secondaryWorkout: { en: "Forearm", ro: "Antebrat" },
-    secondaryWorkoutSrc: [
-      {
-        name: { en: "Close-Grip Pull-Up", ro: "Tractiuni cu priza ingusta" },
-        src: "Antebrat1.gif",
-      },
-      {
-        name: {
-          en: "Seated Dumbbell Wrist Curl",
-          ro: "Flexii de incheietura cu gantere",
-        },
-        src: "Antebrat2.gif",
-      },
-    ],
-  },
-  {
     id: 5,
     day: { en: "FRIDAY", ro: "Vineri" },
-    primaryWorkout: { en: "Shoulders", ro: "Umeri" },
+
+    primaryWorkout: { en: "Thighs", ro: "Coapse" },
     primaryWorkoutSrc: [
-      { name: { en: "Pike Push-Ups", ro: "Flotari Pike" }, src: "Umeri1.gif" },
-      {
-        name: {
-          en: "Seated Dumbbell Press",
-          ro: "Impins deasupra capului cu gantere",
-        },
-        src: "Umeri2.gif",
-      },
-    ],
-    secondaryWorkout: { en: "Thighs", ro: "Coapse" },
-    secondaryWorkoutSrc: [
       {
         name: { en: "Dumbbell Squat", ro: "Genuflexiuni cu gantere" },
         src: "Coapse1.gif",
@@ -152,6 +140,20 @@ export const days = [
       {
         name: { en: "Dumbbell Lunge", ro: "Fandari cu gantere" },
         src: "Coapse2.gif",
+      },
+    ],
+    secondaryWorkout: { en: "Calves", ro: "Gambe" },
+    secondaryWorkoutSrc: [
+      {
+        name: { en: "Donkey Calf Raises", ro: "Ridicări pe vârfuri" },
+        src: "Gambe1.gif",
+      },
+      {
+        name: {
+          en: "Dumbbell Calf Raise",
+          ro: "Ridicari pe varfuri cu gantere",
+        },
+        src: "Gambe2.gif",
       },
     ],
   },

@@ -155,7 +155,10 @@ const EducationalFooter = () => {
             icon={faHeart}
             className={styles["educational-legal__icon"]}
           />{" "}
-          by Radu Padurariu & GorkCoder
+          by Radu Padurariu &{" "}
+          <a href="https://www.youtube.com/watch?v=KkQATIXBY5w" target="_blank">
+            GorkCoder
+          </a>
         </p>
       </div>
     </>
