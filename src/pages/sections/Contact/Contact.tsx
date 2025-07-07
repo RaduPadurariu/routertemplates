@@ -43,7 +43,9 @@ const Contact: React.FC<ContactProps> = ({ contactRef }) => {
                   {/* <p>{item.text2}</p> */}
                 </div>
               ))}
-              <a href="https://radupadurariu.netlify.app">Visit Portfolio</a>
+              <a href="https://radupadurariu2025.netlify.app" target="_blank">
+                Visit Portfolio
+              </a>
             </div>
           </div>
         </div>
