@@ -42,7 +42,7 @@ const FitnessExercisesList: React.FC<FitnessExercisesListProps> = ({
     };
 
     fetchExercisesData();
-  }, [bodyPart]);
+  }, [bodyPart, setExercises]);
 
   // Pagination
   const indexOfLastExercise = currentPage * exercisesPerPage;

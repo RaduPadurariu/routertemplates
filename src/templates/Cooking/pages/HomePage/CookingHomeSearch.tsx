@@ -3,9 +3,9 @@ import CookingCategoryList from "../../components/Category/CookingCategoryList";
 import CookingLoader from "../../components/Loader/CookingLoader";
 import CookingMealList from "../../components/Meal/CookingMealList";
 import CookingNotFound from "../../components/NotFound/CookingNotFound";
-import { useCookingMealContext } from "../../context/CookingMealContext";
 import styles from "./CookingHomePage.module.scss";
 import { MealsLoaderBySearch } from "../../types/types";
+import { useCookingMealContext } from "../../context/Meal/useCookingMealContext";
 
 const CookingHomeSearch = () => {
   const { categories, categoryLoading, categoryError } =

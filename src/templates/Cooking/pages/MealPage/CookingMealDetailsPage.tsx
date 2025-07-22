@@ -3,9 +3,9 @@ import CookingCategoryList from "../../components/Category/CookingCategoryList";
 import CookingLoader from "../../components/Loader/CookingLoader";
 import CookingMealSingle from "../../components/Meal/CookingMealSingle";
 import CookingNotFound from "../../components/NotFound/CookingNotFound";
-import { useCookingMealContext } from "../../context/CookingMealContext";
 import styles from "./CookingMealDetails.module.scss";
 import { CookingSingleFetchMeal, CookingSingleMeal } from "../../types/types";
+import { useCookingMealContext } from "../../context/Meal/useCookingMealContext";
 
 const CookingMealDetailsPage = () => {
   const { categories, categoryLoading, categoryError } =
@@ -13,8 +13,8 @@ const CookingMealDetailsPage = () => {
 
   const meal = useLoaderData() as CookingSingleFetchMeal[];
 
-  let ingredientsArr: string[] = [];
-  let measuresArr: string[] = [];
+  const ingredientsArr: string[] = [];
+  const measuresArr: string[] = [];
   let singleMeal: CookingSingleMeal = {
     id: "",
     title: "",
@@ -30,9 +30,9 @@ const CookingMealDetailsPage = () => {
   };
 
   if (meal && meal.length > 0) {
-    const mealData = meal[0] as Record<string, any>;
+    const mealData = meal[0] as Record<string, string | undefined>;
 
-    for (let props in mealData) {
+    for (const props in mealData) {
       if (props.includes("strIngredient") && mealData[props]) {
         ingredientsArr.push(mealData[props]);
       }

@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import styles from "./CookingCategoryPage.module.scss";
 import CookingMealList from "../../components/Meal/CookingMealList";
 import { MealsLoaderData } from "../../types/types";
-import { useCookingMealContext } from "../../context/CookingMealContext";
+import { useCookingMealContext } from "../../context/Meal/useCookingMealContext";
 
 const CookingCategoryPage = () => {
   const { meals, categoryName } = useLoaderData() as MealsLoaderData;

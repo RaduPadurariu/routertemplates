@@ -1,8 +1,8 @@
 import styles from "./CookingSidebar.module.scss";
 import { ImCancelCircle } from "react-icons/im";
-import { useCookingSidebarContext } from "../../context/CookingSidebarContext";
 import { Link } from "react-router-dom";
-import { useCookingMealContext } from "../../context/CookingMealContext";
+import { useCookingSidebarContext } from "../../context/Sidebar/useCookingSidebarContext";
+import { useCookingMealContext } from "../../context/Meal/useCookingMealContext";
 
 const CookingSidebar = () => {
   const { isSidebarOpen, closeSidebar } = useCookingSidebarContext();

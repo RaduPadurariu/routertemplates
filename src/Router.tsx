@@ -1,4 +1,8 @@
-import { createBrowserRouter, LoaderFunction } from "react-router-dom";
+import {
+  createBrowserRouter,
+  LoaderFunction,
+  LoaderFunctionArgs,
+} from "react-router-dom";
 import App from "./App";
 import "./templates/Cooking/Cooking.scss";
 // Educational
@@ -23,8 +27,7 @@ import {
   CookingCategoryPage,
   CookingMealPage,
 } from "./templates/Cooking/pages";
-import { CookingSidebarProvider } from "./templates/Cooking/context/CookingSidebarContext";
-import { CookingMealProvider } from "./templates/Cooking/context/CookingMealContext";
+
 import axios from "./templates/Cooking/api/axios";
 import {
   MEAL_CATEGORIES_URL,
@@ -38,7 +41,7 @@ import {
 } from "./templates/Cooking/types/types";
 import CookingHomeSearch from "./templates/Cooking/pages/HomePage/CookingHomeSearch";
 import CookingMyMealPage from "./templates/Cooking/pages/MyRecipes/CookingMyMealPage";
-import { CookingMyRecipesProvider } from "./templates/Cooking/context/ContextMyRecipesContext";
+
 import FitnessApp from "./templates/Fitness/FitnessApp";
 import FitnessHome from "./templates/Fitness/pages/Home/FitnessHome";
 import FitnessAPIExercises from "./templates/Fitness/pages/APIExercises/FitnessAPIExercises";
@@ -46,13 +49,16 @@ import FitnessMyExercises from "./templates/Fitness/pages/MyFavoriteExercises/Fi
 import FitnessAPIExerciseDetail from "./templates/Fitness/pages/APIExerciseDetail/FitnessAPIExerciseDetail";
 import WellnessApp from "./templates/Wellness/WellnessApp";
 import WellnessHome from "./templates/Wellness/pages/Home/WellnessHome";
+import { CookingSidebarProvider } from "./templates/Cooking/context/Sidebar/CookingSidebarProvider";
+import { CookingMealProvider } from "./templates/Cooking/context/Meal/CookingMealProvider";
+import { CookingMyRecipesProvider } from "./templates/Cooking/context/MyRecipes/CookingMyRecipesProvider";
 
 // Meal Loader Function for Cooking Template
 
 export const mealsBySearch: LoaderFunction = async ({
   params,
   request: { signal },
-}: any): Promise<MealsLoaderBySearch> => {
+}: LoaderFunctionArgs): Promise<MealsLoaderBySearch> => {
   const searchTerm = params.searchTerm;
 
   if (!searchTerm) {
@@ -107,7 +113,7 @@ export const mealsLoader: LoaderFunction = async ({
 export const singleMealLoader: LoaderFunction = async ({
   params,
   request: { signal },
-}: any): Promise<CookingSingleMeal> => {
+}: LoaderFunctionArgs): Promise<CookingSingleMeal> => {
   const { id } = params;
 
   try {

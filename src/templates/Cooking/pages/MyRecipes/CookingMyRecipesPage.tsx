@@ -1,8 +1,9 @@
 import styles from "./CookingMyRecipesPage.module.scss";
 
 import CookingMyMeals from "./CookingMyMeals";
-import { useCookingMyRecipesContext } from "../../context/ContextMyRecipesContext";
+
 import CookingNotFound from "../../components/NotFound/CookingNotFound";
+import { useCookingMyRecipesContext } from "../../context/MyRecipes/useCookingMyRecipesContext";
 
 const CookingMyRecipesPage = () => {
   const { filterMeals } = useCookingMyRecipesContext();

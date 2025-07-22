@@ -3,7 +3,7 @@ import styles from "./CookingHeader.module.scss";
 import { ChangeEvent, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { myRecipesList } from "../../../../data/cookingData";
-import { useCookingMyRecipesContext } from "../../context/ContextMyRecipesContext";
+import { useCookingMyRecipesContext } from "../../context/MyRecipes/useCookingMyRecipesContext";
 
 const CookingMySearchForm = () => {
   const navigate = useNavigate();

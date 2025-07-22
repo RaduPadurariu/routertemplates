@@ -1,7 +1,7 @@
 import CookingCategoryList from "../../components/Category/CookingCategoryList";
 import CookingLoader from "../../components/Loader/CookingLoader";
 import CookingNotFound from "../../components/NotFound/CookingNotFound";
-import { useCookingMealContext } from "../../context/CookingMealContext";
+import { useCookingMealContext } from "../../context/Meal/useCookingMealContext";
 import styles from "./CookingHomePage.module.scss";
 
 const CookingHomePage = () => {

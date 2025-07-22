@@ -6,7 +6,7 @@ import { BiChevronsRight } from "react-icons/bi";
 import { FaUtensilSpoon } from "react-icons/fa";
 
 const CookingMealSingle = ({ meal }: { meal: CookingSingleMeal }) => {
-  let tags = meal?.tags?.split(",");
+  const tags = meal?.tags?.split(",");
 
   let instructions = meal?.instructions?.split("\r\n");
   instructions = instructions?.filter((instruction) => instruction.length > 1);

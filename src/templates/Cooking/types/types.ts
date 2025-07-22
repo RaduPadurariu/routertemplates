@@ -1,3 +1,5 @@
+import { Dispatch } from "react";
+
 export interface CookingCategory {
   idCategory: string;
   strCategory: string;
@@ -51,6 +53,7 @@ export interface CookingSingleFetchMeal {
   strYoutube?: string;
   ingredients: string[];
   measures: string[];
+  [key: string]: string | string[] | undefined;
 }
 
 export interface CookingSingleMeal {
@@ -79,4 +82,30 @@ export interface CookingPersonalSingleMeal {
   tags?: string[];
   ingredients: string[][];
   time: string;
+}
+
+// Context Sidebar
+
+export interface CookingSidebarState {
+  isSidebarOpen: boolean;
+}
+
+export interface CookingSidebarContextType extends CookingSidebarState {
+  openSidebar: () => void;
+  closeSidebar: () => void;
+}
+
+// Context Meal
+
+export interface CookingMealContextType extends CookingMealState {
+  dispatch: Dispatch<any>;
+}
+
+// Context My Recipes
+
+export interface CookingMyRecipesContextType {
+  filterMeals: CookingPersonalSingleMeal[];
+  setFilterMeals: React.Dispatch<
+    React.SetStateAction<CookingPersonalSingleMeal[]>
+  >;
 }
