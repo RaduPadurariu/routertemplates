@@ -30,7 +30,7 @@ const WellnessHeader = () => {
               <ul className={`${isOpen ? styles.sideMenu : ""}`}>
                 {wellnessNavLinks.map((navlink) => {
                   return (
-                    <li key={navlink.id}>
+                    <li key={navlink.id} onClick={() => setIsOpen(!isOpen)}>
                       <Link to={navlink.link}>{navlink.text}</Link>
                     </li>
                   );

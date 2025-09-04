@@ -17,15 +17,15 @@ export const fitnessFeatures = [
 export const fitnessExercises = [
   {
     id: 1,
-    title: "API Exercises",
-    src: "/images/Templates/Fitness/1.svg",
-    link: "/fitness/apiExercises",
-  },
-  {
-    id: 2,
     title: "Favorite Exercises",
     src: "/images/Templates/Fitness/2.svg",
     link: "/fitness/myExercises",
+  },
+  {
+    id: 2,
+    title: "API Exercises",
+    src: "/images/Templates/Fitness/1.svg",
+    link: "/fitness/apiExercises",
   },
 ];
 

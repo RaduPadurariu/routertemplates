@@ -7,6 +7,7 @@ const FitnessFooter = () => {
       <span>
         <a
           target="_blank"
+          rel="noreferrer"
           href="https://www.dropbox.com/scl/fo/foqrcjt5gdnfelvkvoujt/ADhPpSu49B5ItUpG0eNy82w?rlkey=otpo9j8622cmi7b51yncx94or&e=1&dl=0"
         >
           {" "}
@@ -15,7 +16,11 @@ const FitnessFooter = () => {
       </span>
       &nbsp;and
       <span>
-        <a target="_blank" href="https://www.youtube.com/watch?v=KBpoBc98BwM">
+        <a
+          target="_blank"
+          href="https://www.youtube.com/watch?v=KBpoBc98BwM"
+          rel="noreferrer"
+        >
           {" "}
           JavaScript Mastery
         </a>

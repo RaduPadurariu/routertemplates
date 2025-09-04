@@ -69,9 +69,9 @@ const CookingMealSingle = ({ meal }: { meal: CookingSingleMeal }) => {
                   }
                 >
                   <span>Source: &nbsp;</span>
-                  <a href={meal.source}>
-                    {meal.source
-                      ? (meal?.source).substring(0, 40) + "..."
+                  <a href={meal?.source ?? "#"}>
+                    {meal?.source
+                      ? meal.source.substring(0, 40) + "..."
                       : "Not found"}
                   </a>
                 </div>

@@ -25,6 +25,7 @@ const Footer = () => {
             style={{ color: "white" }}
             href="https://www.youtube.com/watch?v=gkj2Fk6k4Qk"
             target="_blank"
+            rel="noreferrer"
           >
             GorkCoder.&nbsp;
           </a>

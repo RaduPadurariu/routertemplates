@@ -156,7 +156,11 @@ const EducationalFooter = () => {
             className={styles["educational-legal__icon"]}
           />{" "}
           by Radu Padurariu &{" "}
-          <a href="https://www.youtube.com/watch?v=KkQATIXBY5w" target="_blank">
+          <a
+            href="https://www.youtube.com/watch?v=KkQATIXBY5w"
+            target="_blank"
+            rel="noreferrer"
+          >
             GorkCoder
           </a>
         </p>

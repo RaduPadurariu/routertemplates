@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const FitnessNavbar = () => {
   const [nav, setNav] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const changeBackground = () => {
     if (window.scrollY >= 50) {
@@ -40,6 +41,8 @@ const FitnessNavbar = () => {
         type="checkbox"
         className={styles["fitness-nav__menuBtn"]}
         id="fitness-nav__menuBtn"
+        checked={isOpen}
+        onClick={() => setIsOpen(!isOpen)}
       />
       <label
         htmlFor="fitness-nav__menuBtn"
@@ -50,7 +53,7 @@ const FitnessNavbar = () => {
       <ul className={styles["fitness-nav__menu"]}>
         {fitnessNavLinks.map((navLink) => {
           return (
-            <li key={navLink.id}>
+            <li key={navLink.id} onClick={() => setIsOpen(!isOpen)}>
               <Link to={navLink.link}>{navLink.text}</Link>
             </li>
           );
