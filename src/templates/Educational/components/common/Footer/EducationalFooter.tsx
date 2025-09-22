@@ -9,7 +9,6 @@ import styles from "./EducationalFooter.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendar,
-  faHeart,
   faPaperPlane,
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
@@ -150,12 +149,7 @@ const EducationalFooter = () => {
       {/* Legal rights */}
       <div className={styles["educational-legal"]}>
         <p>
-          Copyright ©2024 All rights reserved | This template is made with{" "}
-          <FontAwesomeIcon
-            icon={faHeart}
-            className={styles["educational-legal__icon"]}
-          />{" "}
-          by Radu Padurariu &{" "}
+          © 2024 Radu Padurariu. Inspired by{" "}
           <a
             href="https://www.youtube.com/watch?v=KkQATIXBY5w"
             target="_blank"

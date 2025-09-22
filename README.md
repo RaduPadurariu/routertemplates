@@ -1,50 +1,34 @@
-# React + TypeScript + Vite
+# Router 6.4 Templates (2024-2025)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website contains 5 responsive templates built with React Router 6.4, TypeScript, and Sass. The project was developed to practice routing with loaders and actions, type safety, and modular SCSS styling. Each template focuses on a different domain, with clean design and simple navigation. My challenge was to manage five templates within a single website and on each to add an extra personal page for real use cases.
 
-Currently, two official plugins are available:
+The website contains the following templates:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔑 Portal
 
-## Expanding the ESLint configuration
+1. Access Portal-portfolio Template
+   A responsive portal with portfolio theme that contains a navbar, hero section, contact form and footer. Designed as an entry point for my templates.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+📂 Templates
 
-- Configure the top-level `parserOptions` property like this:
+2. Educational Template
+   A template for an educational website with courses and learning resources.
+   On the personal page I track my notes from HTML and CSS tutorial course from W3 school website in 2022.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. Cooking Template
+   A cooking website layout with recipes and categories.
+   On the personal page I manage my own recipes and cooking notes for a Philips Multicooker.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+4. Fitness Template
+   A fitness and health-oriented template with workout routines and tracking sections.
+   On the personal page I manage my weekly workout plan.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+5. Wellness Template
+   A lifestyle template focused on wellness and healthy habits.
+   On the personal page I organize my daily routine for balance and productivity.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Can be found on https://raduroutertemplates.netlify.app
+
+Technologies used: React, Router 6.4, TypeScript, Sass
+
+All rights reserved - Radu Padurariu 2025

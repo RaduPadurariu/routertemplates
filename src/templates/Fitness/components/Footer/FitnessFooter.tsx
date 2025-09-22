@@ -3,7 +3,7 @@ import styles from "./FitnessFooter.module.scss";
 const FitnessFooter = () => {
   return (
     <div className={styles["fitness-footer"]}>
-      Copyright © All rights reserved | Radu Padurariu inspired by
+      © 2024 Radu Padurariu. Inspired by
       <span>
         <a
           target="_blank"

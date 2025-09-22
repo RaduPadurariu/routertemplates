@@ -10,6 +10,7 @@ const EducationalMyEducation = () => {
             <iframe
               src="/data/websites/w3practice_tutorial/index.html"
               title="w3 school notes"
+              sandbox=""
               className={styles["educational-myCourses__w3_iframe"]}
             ></iframe>
           </div>

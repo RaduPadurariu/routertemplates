@@ -20,10 +20,11 @@ const HeroPage = () => {
           />
         </h1>
         <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book
+          In this project, I built a website that manages five different
+          templates using React Router 6.4. The main template serves as a portal
+          that provides access to the other four. Each of these four templates
+          includes an extra Personal page where I implemented a custom tool that
+          I find useful in daily life.
         </p>
         <button className="primaryBtn">Download CV</button>
       </div>
